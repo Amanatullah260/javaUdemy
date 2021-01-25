@@ -1,0 +1,126 @@
+Microsoft Windows [Version 10.0.16299.1087]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\amanat>java -version
+java version "15.0.1" 2020-10-20
+Java(TM) SE Runtime Environment (build 15.0.1+9-18)
+Java HotSpot(TM) 64-Bit Server VM (build 15.0.1+9-18, mixed mode, sharing)
+
+C:\Users\amanat>jshell
+|  Welcome to JShell -- Version 15.0.1
+|  For an introduction type: /help intro
+
+5 * 5
+$1 ==> 25
+
+jshell> 5 * 10
+$2 ==> 50
+
+jshell> 5 + 10
+$3 ==> 15
+
+jshell> 5 - 10
+$4 ==> -5
+
+jshell> 10/2
+$5 ==> 5
+
+jshell> 9 % 2
+$6 ==> 1
+
+jshell> 8 % 2
+$7 ==> 0
+
+jshell> 5 + 5 + 5
+$8 ==> 15
+
+jshell> 5 + 10 -15
+$9 ==> 0
+
+jshell> 5 * 5 + 10
+$10 ==> 35
+
+jshell> 5 * 15 / 3
+$11 ==> 25
+
+jshell> 24 * 60
+$12 ==> 1440
+
+jshell> 24 * 60 * 60
+$13 ==> 86400
+
+
+jshell> 5 / 2
+$14 ==> 2
+
+jshell> 5.0/2.0
+$15 ==> 2.5
+
+jshell> 5.0/2
+$16 ==> 2.5
+
+jshell> 5 + 5 * 6
+$17 ==> 35
+
+jshell> 5 - 2 * 2
+$18 ==> 1
+
+jshell> 5 - 2/2
+$19 ==> 4
+
+jshell> ( 5 - 2) / 2
+$20 ==> 1
+
+jshell> ( 5 - 2) * 2
+$21 ==> 6
+
+jshell> 5 - ( 2 * 2)
+$22 ==> 1
+
+jshell> 3 * 4
+$23 ==> 12             ^---^
+
+jshell> System . out . println("5 * 5 =10")
+5 * 5 =10
+
+jshell> System.out.println("5 * 5")
+5 * 5
+
+jshell> System.out.println(5 * 5)
+25                         ^
+
+jshell> System.out.println("Hello World")
+Hello World
+
+jshell> System.out.println(5*3)
+15
+
+jshell> System.out.println("5 * 3")
+5 * 3
+
+jshell> System.out.println("5 * 1 = 5")
+5 * 1 = 5
+
+jshell> System.out.println("5 * 2 = 5")
+5 * 2 = 5
+
+jshell> System.out.println("5 * 3 = 5")
+5 * 3 = 5
+
+jshell> System.out.println("5 * 5 = 5")
+5 * 5 = 5
+
+jshell> System.out.println("24 * 60 * 60")
+24 * 60 * 60
+
+jshell> System.out.println(24 * 60 * 60)
+86400
+
+jshell> System.out.println("Hello       World")
+Hello       World
+
+jshell> System.out.println("HelloWorld")
+HelloWorld^
+
+jshell> System.out.println("hello \"world")
+hello "world 
