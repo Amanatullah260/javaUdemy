@@ -109,3 +109,57 @@ j ==> 12
 jshell> System.
    ...> out
 $52 ==> java.io.PrintStream@46ee7fe8
+jshell> System.out.println("5 * 2 =10")
+5 * 2 =10
+
+jshell> System.out.printf("5 * 2 =10")
+5 * 2 =10$2 ==> java.io.PrintStream@5387f9e0
+
+jshell> System.out.printf("5 * 2 =10").println()
+5 * 2 =10
+
+
+jshell> System.out.printf("5 * 2 =10 %d" , 5*2).println()
+5 * 2 =10 10
+
+jshell> System.out.printf("5 * 2 = %d" , 5*2).println()
+5 * 2 = 10
+
+jshell> System.out.printf("%d %d %d",5 ,7,5 *7).println()
+5 7 35
+
+jshell> System.out.printf("%d * %d = %d" , 5 , 7 , 5 * 7).println()
+5 * 7 = 35
+
+jshell>
+
+jshell> System.out.printf("%d + %d + %d = %d", 5, 6, 7, 5 + 6 + 7).println()
+5 + 6 + 7 = 18
+
+jshell> System.out.printf("%d + %d + %d = %d", 5, 6, 7).println()
+5 + 6 + 7 = |  Exception java.util.MissingFormatArgumentException: Format specifier '%d'
+|        at Formatter.format (Formatter.java:2672)
+|        at PrintStream.format (PrintStream.java:1209)
+|        at PrintStream.printf (PrintStream.java:1105)
+|        at (#2:1)
+
+jshell> System.out.printf("%d + %d + %d", 5 , 6, 7, 8).println()
+5 + 6 + 7
+
+jshell> System.out.printf("print %s", "testing").println()
+print testing
+
+jshell> System.out.printf("%d + %d + %d ", 5.5, 5.6, 5.7).println()
+|  Exception java.util.IllegalFormatConversionException: d != java.lang.Double
+|        at Formatter$FormatSpecifier.failConversion (Formatter.java:4426)
+|        at Formatter$FormatSpecifier.printInteger (Formatter.java:2938)
+|        at Formatter$FormatSpecifier.print (Formatter.java:2892)
+|        at Formatter.format (Formatter.java:2673)
+|        at PrintStream.format (PrintStream.java:1209)
+|        at PrintStream.printf (PrintStream.java:1105)
+|        at (#5:1)
+
+jshell> System.out.printf("%f + %f + %f", 5.5, 5.6, 5.7).println()
+5.500000 + 5.600000 + 5.700000
+
+jshell>
