@@ -34,64 +34,6 @@ $7 ==> 0
 jshell> 5 + 5 + 5
 $8 ==> 15
 
-jshell> 5 + 10 -15
-$9 ==> 0
-
-jshell> 5 * 5 + 10
-$10 ==> 35
-
-jshell> 5 * 15 / 3
-$11 ==> 25
-
-jshell> 24 * 60
-$12 ==> 1440
-
-jshell> 24 * 60 * 60
-$13 ==> 86400
-
-
-jshell> 5 / 2
-$14 ==> 2
-
-jshell> 5.0/2.0
-$15 ==> 2.5
-
-jshell> 5.0/2
-$16 ==> 2.5
-
-jshell> 5 + 5 * 6
-$17 ==> 35
-
-jshell> 5 - 2 * 2
-$18 ==> 1
-
-jshell> 5 - 2/2
-$19 ==> 4
-
-jshell> ( 5 - 2) / 2
-$20 ==> 1
-
-jshell> ( 5 - 2) * 2
-$21 ==> 6
-
-jshell> 5 - ( 2 * 2)
-$22 ==> 1
-
-jshell> 3 * 4
-$23 ==> 12             ^---^
-
-jshell> System . out . println("5 * 5 =10")
-5 * 5 =10
-
-jshell> System.out.println("5 * 5")
-5 * 5
-
-jshell> System.out.println(5 * 5)
-25                         ^
-
-jshell> System.out.println("Hello World")
-Hello World
-
 jshell> System.out.println(5*3)
 15
 
@@ -120,7 +62,50 @@ jshell> System.out.println("Hello       World")
 Hello       World
 
 jshell> System.out.println("HelloWorld")
-HelloWorld^
+HelloWorld
 
 jshell> System.out.println("hello \"world")
 hello "world 
+
+jshell> System.out.println("Hello \n World")
+Hello
+ World
+
+jshell> System.out.println("Hello \nworld")
+Hello
+world
+
+jshell> System.out.println("Hello  n World")
+Hello  n World
+
+jshell> System.out.println("Hello \\ World")
+Hello \ World
+
+jshell> System.out.println("Hello \\\\ World")
+Hello \\ World
+
+jshell> Math.random()
+$45 ==> 0.15102808623829667
+
+jshell> Math.random()
+$46 ==> 0.20731906296790292
+
+jshell> Math.random()
+$47 ==> 0.8401241256061557
+
+jshell> Math.min(25,56)
+$48 ==> 25
+
+jshell> Math.max(45,67)
+$49 ==> 67
+
+jshell> int i =5;
+i ==> 5
+
+jshell> int j =
+   ...> 12
+j ==> 12
+
+jshell> System.
+   ...> out
+$52 ==> java.io.PrintStream@46ee7fe8
