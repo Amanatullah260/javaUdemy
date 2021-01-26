@@ -33,133 +33,228 @@ $7 ==> 0
 
 jshell> 5 + 5 + 5
 $8 ==> 15
-
-jshell> System.out.println(5*3)
-15
-
-jshell> System.out.println("5 * 3")
-5 * 3
-
-jshell> System.out.println("5 * 1 = 5")
-5 * 1 = 5
-
-jshell> System.out.println("5 * 2 = 5")
-5 * 2 = 5
-
-jshell> System.out.println("5 * 3 = 5")
-5 * 3 = 5
-
-jshell> System.out.println("5 * 5 = 5")
-5 * 5 = 5
-
-jshell> System.out.println("24 * 60 * 60")
-24 * 60 * 60
-
-jshell> System.out.println(24 * 60 * 60)
-86400
-
-jshell> System.out.println("Hello       World")
-Hello       World
-
-jshell> System.out.println("HelloWorld")
-HelloWorld
-
-jshell> System.out.println("hello \"world")
-hello "world 
-
-jshell> System.out.println("Hello \n World")
-Hello
- World
-
-jshell> System.out.println("Hello \nworld")
-Hello
-world
-
-jshell> System.out.println("Hello  n World")
-Hello  n World
-
-jshell> System.out.println("Hello \\ World")
-Hello \ World
-
-jshell> System.out.println("Hello \\\\ World")
-Hello \\ World
-
-jshell> Math.random()
-$45 ==> 0.15102808623829667
-
-jshell> Math.random()
-$46 ==> 0.20731906296790292
-
-jshell> Math.random()
-$47 ==> 0.8401241256061557
-
-jshell> Math.min(25,56)
-$48 ==> 25
-
-jshell> Math.max(45,67)
-$49 ==> 67
-
-jshell> int i =5;
-i ==> 5
-
-jshell> int j =
-   ...> 12
-j ==> 12
-
-jshell> System.
-   ...> out
-$52 ==> java.io.PrintStream@46ee7fe8
-jshell> System.out.println("5 * 2 =10")
-5 * 2 =10
-
-jshell> System.out.printf("5 * 2 =10")
-5 * 2 =10$2 ==> java.io.PrintStream@5387f9e0
-
-jshell> System.out.printf("5 * 2 =10").println()
-5 * 2 =10
-
-
-jshell> System.out.printf("5 * 2 =10 %d" , 5*2).println()
-5 * 2 =10 10
-
-jshell> System.out.printf("5 * 2 = %d" , 5*2).println()
+jshell> System.out.println("5 * 2 = 10")
 5 * 2 = 10
 
-jshell> System.out.printf("%d %d %d",5 ,7,5 *7).println()
-5 7 35
+jshell> System.out.printf("%d * %d = %d", 5, 2, 5 * 2).println()
+5 * 2 = 10
 
-jshell> System.out.printf("%d * %d = %d" , 5 , 7 , 5 * 7).println()
-5 * 7 = 35
+jshell> System.out.printf("%d * %d = %d", 5, 1, 5 * 2).println()
+5 * 1 = 10
+
+jshell> System.out.printf("%d * %d = %d", 5, 4, 5 * 4).println()
+5 * 4 = 20
+
+jshell> int number = 10
+number ==> 10
+
+jshell> number
+number ==> 10
+
+jshell> number = 12
+number ==> 12
+
+jshell> number
+number ==> 12
+
+jshell> int number = 25
+number ==> 25
+
+jshell> int number2 = 25
+number2 ==> 25
+
+jshell> number2 = 100
+number2 ==> 100
+
+jshell> int i = 1;
+i ==> 1
+
+jshell> System.out.printf("%d * %d = %d", 5, i, 5 * i).println()
+5 * 1 = 5
+
+jshell> i
+i ==> 1
+
+jshell> 5 * i
+$15 ==> 5
+
+jshell> i = 2
+i ==> 2
+
+jshell>  System.out.printf("%d * %d = %d", 5, i, 5 * i).println()
+5 * 2 = 10
+
+jshell> i = 3
+i ==> 3
+
+jshell>  System.out.printf("%d * %d = %d", 5, i, 5 * i).println()
+5 * 3 = 15
+
+jshell> i = 10
+i ==> 10
+
+jshell>  System.out.printf("%d * %d = %d", 5, i, 5 * i).println()
+5 * 10 = 50
+
+jshell> int a = 10;
+a ==> 10
+
+jshell> int b = 20;
+b ==> 20
+
+jshell> int c = 30;
+c ==> 30
+
+jshell>  System.out.printf("a + b + c = a+b+c").println()
+a + b + c = a+b+c
+
+jshell>  System.out.printf("%d + %d + %d =%d", a, b, c, a+b+c).println()
+10 + 20 + 30 =60
+
+jshell> a = 50
+a ==> 50
+
+jshell>  System.out.printf("%d + %d + %d =%d", a, b, c, a+b+c).println()
+50 + 20 + 30 =100
+
+jshell> b = 60
+b ==> 60
+
+jshell>  System.out.printf("%d + %d + %d =%d", a, b, c, a+b+c).println()
+50 + 60 + 30 =140
+
+jshell> int newVariable
+newVariable ==> 0
+
+jshell> newVariable
+newVariable ==> 0
+
+jshell> int  undeclaredVariable
+undeclaredVariable ==> 0
+
+jshell>  undeclaredVariable
+undeclaredVariable ==> 0
+
+jshell> 5 *  undeclaredVariable
+$35 ==> 0
+
+jshell> int number = 5
+number ==> 5
+
+jshell> int number2 = number
+number2 ==> 5
+
+jshell> int noOfgoals
+noOfgoals ==> 0
+
+jshell> int NoOfGoals
+NoOfGoals ==> 0
+
+jshell> int score;
+score ==> 0
+
+jshell> int s
+s ==> 0
+
+jshell> int i;
+i ==> 0
+
+jshell> byte b;
+b ==> 0
+
+jshell> short s;
+s ==> 0
+
+jshell> int j;
+j ==> 0
+
+jshell> long i;
+i ==> 0
+
+jshell> long l;
+l ==> 0
+
+jshell> float f = 4.0f;
+f ==> 4.0
+
+jshell> float f = 4.5f;
+f ==> 4.5
+
+jshell> double db1 = 4.5;
+db1 ==> 4.5
+
+jshell> char ch = 'A'
+ch ==> 'A'
+
+jshell> boolean isPrime = true
+isPrime ==> true
+
+jshell> boolean isprime = false
+isprime ==> false
+
+jshell> boolean isprime = true
+isprime ==> true
 
 jshell>
 
-jshell> System.out.printf("%d + %d + %d = %d", 5, 6, 7, 5 + 6 + 7).println()
-5 + 6 + 7 = 18
+jshell> float f3 = 4.5f;
+f3 ==> 4.5
 
-jshell> System.out.printf("%d + %d + %d = %d", 5, 6, 7).println()
-5 + 6 + 7 = |  Exception java.util.MissingFormatArgumentException: Format specifier '%d'
-|        at Formatter.format (Formatter.java:2672)
-|        at PrintStream.format (PrintStream.java:1209)
-|        at PrintStream.printf (PrintStream.java:1105)
-|        at (#2:1)
+jshell> char ch = 'A'
+ch ==> 'A'
 
-jshell> System.out.printf("%d + %d + %d", 5 , 6, 7, 8).println()
-5 + 6 + 7
+jshell> short numberOfGoals
+numberOfGoals ==> 0
 
-jshell> System.out.printf("print %s", "testing").println()
-print testing
+jshell>  numberOfGoals
+numberOfGoals ==> 0
 
-jshell> System.out.printf("%d + %d + %d ", 5.5, 5.6, 5.7).println()
-|  Exception java.util.IllegalFormatConversionException: d != java.lang.Double
-|        at Formatter$FormatSpecifier.failConversion (Formatter.java:4426)
-|        at Formatter$FormatSpecifier.printInteger (Formatter.java:2938)
-|        at Formatter$FormatSpecifier.print (Formatter.java:2892)
-|        at Formatter.format (Formatter.java:2673)
-|        at PrintStream.format (PrintStream.java:1209)
-|        at PrintStream.printf (PrintStream.java:1105)
-|        at (#5:1)
+jshell>  numberOfGoals
+numberOfGoals ==> 0
 
-jshell> System.out.printf("%f + %f + %f", 5.5, 5.6, 5.7).println()
-5.500000 + 5.600000 + 5.700000
+jshell>  numberOfGoals++
+$15 ==> 0
 
-jshell>
+jshell>  numberOfGoals
+numberOfGoals ==> 1
+
+jshell>  numberOfGoals++
+$17 ==> 1
+
+jshell>  numberOfGoals
+numberOfGoals ==> 2
+
+jshell> long populationOfTheWorld
+populationOfTheWorld ==> 0
+
+jshell> double average;
+average ==> 0.0
+
+jshell> char ch = 'A'
+ch ==> 'A'
+
+jshell> char ch = 'B'
+ch ==> 'B'
+
+jshell> char grade ='c'
+grade ==> 'c'
+
+jshell> grade = 'A'
+grade ==> 'A'
+
+jshell> boolean iseven
+iseven ==> false
+
+jshell> iseven = true
+iseven ==> true
+
+jshell> boolean isprime
+isprime ==> false
+
+jshell> boolean isItRainingToday
+isItRainingToday ==> false
+
+jshell> boolean areYouEnjoyingTheCouareYouEnjoyingTheCourse ==> false
+
+jshell> areYouEnjoyingTheCourse
+areYouEnjoyingTheCourse ==> false
