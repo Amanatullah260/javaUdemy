@@ -258,3 +258,427 @@ jshell> boolean areYouEnjoyingTheCouareYouEnjoyingTheCourse ==> false
 
 jshell> areYouEnjoyingTheCourse
 areYouEnjoyingTheCourse ==> false
+jshell> int i = 10
+i ==> 10
+
+jshell> int j = 15
+j ==> 15
+
+jshell> j
+j ==> 15
+
+jshell> i = j
+i ==> 15
+
+jshell> i = j * 2
+i ==> 30
+
+jshell> i = j * 2
+i ==> 30
+
+jshell> i = i * 2
+i ==> 60
+
+jshell> i = i * 2
+i ==> 120
+
+jshell> i = i - i
+i ==> 0
+
+jshell> i = i + i
+i ==> 0
+
+jshell>  i = i + i
+i ==> 0
+
+jshell> i = i + 1
+i ==> 1
+
+jshell> i = i + 1
+i ==> 2
+
+jshell> i = i + 1
+i ==> 3
+
+jshell> i = i + 1
+i ==> 4
+
+jshell> i = i + 1
+i ==> 5
+
+jshell> i = i + 1
+i ==> 6
+
+jshell> i = i - 1
+i ==> 5
+
+jshell> i = i - 1
+i ==> 4
+
+jshell> i = i - 1
+i ==> 3
+
+jshell> i = i - 1
+i ==> 2
+
+jshell> i = i - 1
+i ==> 1
+
+jshell> i = i - 1
+i ==> 0
+
+jshell> i = i - 1
+i ==> -1
+
+jshell> int number = 5;
+number ==> 5
+
+jshell> number = number + 1
+number ==> 6
+
+jshell> number++
+$27 ==> 6
+
+jshell> number
+number ==> 7
+
+jshell> number++
+$29 ==> 7
+
+jshell> number
+number ==> 8
+
+jshell> number--
+$31 ==> 8
+
+jshell> int number = 5
+number ==> 5
+
+jshell> number++
+$33 ==> 5
+
+jshell> ++number
+$34 ==> 7
+
+jshell> number
+number ==> 7
+
+jshell> --number
+$36 ==> 6
+
+jshell> number--
+$37 ==> 6
+
+jshell> number
+number ==> 5
+
+jshell> i = i + 2
+i ==> 1
+
+jshell> i = i + 2
+i ==> 3
+
+jshell> i += 2
+$41 ==> 5
+
+jshell> i -= 2
+$42 ==> 3
+
+jshell> i *= 5
+$43 ==> 15
+
+jshell> i
+i ==> 15
+
+jshell> i /= 4
+$45 ==> 3
+
+jshell> i %= 2
+$46 ==> 1
+
+jshell>
+
+jshell> System.out.println("Output")
+Output
+
+jshell> System.out.printf("%d", i).println()
+1
+
+jshell> System.out.println("No 1")
+No 1
+
+jshell> System.out.println("No 2")
+No 2
+
+jshell> i =
+   ...>
+   ...> 6
+i ==> 6
+
+jshell> i = 6; j=6;
+i ==> 6
+j ==> 6
+
+jshell> i = 6
+i ==> 6
+
+jshell> i = 6;
+i ==> 6
+
+jshell> i = 6; j=6
+i ==> 6
+j ==> 6
+
+jshell> int i = 10
+i ==> 10
+
+jshell> int j = 15
+j ==> 15
+
+jshell> j
+j ==> 15
+
+jshell> i = j
+i ==> 15
+
+jshell> i = j * 2
+i ==> 30
+
+jshell> i = j * 2
+i ==> 30
+
+jshell> i = i * 2
+i ==> 60
+
+jshell> i = i * 2
+i ==> 120
+
+jshell> i = i - i
+i ==> 0
+
+jshell> i = i + i
+i ==> 0
+
+jshell>  i = i + i
+i ==> 0
+
+jshell> i = i + 1
+i ==> 1
+
+jshell> i = i + 1
+i ==> 2
+
+jshell> i = i + 1
+i ==> 3
+
+jshell> i = i + 1
+i ==> 4
+
+jshell> i = i + 1
+i ==> 5
+
+jshell> i = i + 1
+i ==> 6
+
+jshell> i = i - 1
+i ==> 5
+
+jshell> i = i - 1
+i ==> 4
+
+jshell> i = i - 1
+i ==> 3
+
+jshell> i = i - 1
+i ==> 2
+
+jshell> i = i - 1
+i ==> 1
+
+jshell> i = i - 1
+i ==> 0
+
+jshell> i = i - 1
+i ==> -1
+
+jshell> int number = 5;
+number ==> 5
+
+jshell> number = number + 1
+number ==> 6
+
+jshell> number++
+$27 ==> 6
+
+jshell> number
+number ==> 7
+
+jshell> number++
+$29 ==> 7
+
+jshell> number
+number ==> 8
+
+jshell> number--
+$31 ==> 8
+
+jshell> int number = 5
+number ==> 5
+
+jshell> number++
+$33 ==> 5
+
+jshell> ++number
+$34 ==> 7
+
+jshell> number
+number ==> 7
+
+jshell> --number
+$36 ==> 6
+
+jshell> number--
+$37 ==> 6
+
+jshell> number
+number ==> 5
+
+jshell> i = i + 2
+i ==> 1
+
+jshell> i = i + 2
+i ==> 3
+
+jshell> i += 2
+$41 ==> 5
+
+jshell> i -= 2
+$42 ==> 3
+
+jshell> i *= 5
+$43 ==> 15
+
+jshell> i
+i ==> 15
+
+jshell> i /= 4
+$45 ==> 3
+
+jshell> i %= 2
+$46 ==> 1
+
+jshell> System.out.println("Output")
+Output
+
+jshell> System.out.printf("%d", i).println()
+1
+
+jshell> System.out.println("No 1")
+No 1
+
+jshell> System.out.println("No 2")
+No 2
+
+jshell> i =
+   ...>
+   ...> 6
+i ==> 6
+
+jshell> i = 6; j=6;
+i ==> 6
+j ==> 6
+
+jshell> i = 6
+i ==> 6
+
+jshell> i = 6;
+i ==> 6
+
+jshell> i = 6; j=6
+i ==> 6
+j ==> 6
+
+jshell> int i = 6
+i ==> 6
+
+jshell> 3 * 4
+$2 ==> 12
+
+jshell> $2
+$2 ==> 12
+
+jshell> $2 * 2
+$4 ==> 24
+
+jshell> $2 * 3
+$5 ==> 36
+
+jshell> System.out.printf("%d * %d = %d", 5, i, 5 * i).println()
+5 * 6 = 30
+
+jshell> int i = 6
+i ==> 6
+
+jshell> System.out.printf("%d * %d = %d", 5, i, 5 * i).println()
+5 * 6 = 30
+
+jshell> i = 7
+i ==> 7
+
+jshell> System.out.printf("%d * %d = %d", 5, i, 5 * i).println()
+5 * 7 = 35
+
+jshell> i = 10
+i ==> 10
+
+jshell> i < 5
+$12 ==> false
+
+jshell> i > 5
+$13 ==> true
+
+jshell> i <=5
+$14 ==> false
+
+jshell> i <=10
+$15 ==> true
+
+jshell> i >=10
+$16 ==> true
+
+jshell> System.out.println("i is less than 5");
+i is less than 5
+
+jshell> i
+i ==> 10
+
+jshell> if (i<5)
+   ...> System.out.println("i is less than 5");
+
+jshell> i
+i ==> 10
+
+jshell> i = 4
+i ==> 4
+
+jshell> if (i<5)
+   ...> System.out.println("i is less than 5");
+i is less than 5
+
+jshell> int number1 = 5;
+number1 ==> 5
+
+jshell> int number2 = 7;
+number2 ==> 7
+
+jshell> if (number2>number1)
+   ...> System.out.println("number2 is greater than number1")
+number2 is greater than number1
+
+jshell> number2 = 3
+number2 ==> 3
+
+jshell> if (number2>number1)
+   ...> System.out.println("number2 is greater than number1")
+
+jshell>
