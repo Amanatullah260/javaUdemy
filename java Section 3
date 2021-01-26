@@ -682,3 +682,98 @@ jshell> if (number2>number1)
    ...> System.out.println("number2 is greater than number1")
 
 jshell>
+jshell> int i = 4
+i ==> 4
+
+jshell> if (i<5)
+   ...> System.out.println("i is less than 5")
+i is less than 5
+
+jshell> int number1 = 5;
+number1 ==> 5
+
+jshell> int number2 = 7;
+number2 ==> 7
+
+jshell> if (number2>number1)
+   ...> System.out.println("number2 is greater than number1")
+number2 is greater than number1
+
+jshell> number2 = 3
+number2 ==> 3
+
+jshell> if (number2>number1)
+   ...> System.out.println("number2 is greater than number1")
+
+jshell> int a = 1
+a ==> 1
+
+jshell> int b = 2
+b ==> 2
+
+jshell> int c = 3
+c ==> 3
+
+jshell> int d = 1
+d ==> 1
+
+jshell> if (a + b > c + d)
+   ...> System.out.println("a + b is greater than c + d")
+
+jshell> int a = 6
+a ==> 6
+
+jshell> System.out.println("a + b is greater than c + d")
+a + b is greater than c + d
+
+jshell> if (a + b > c + d)
+   ...> System.out.println("a + b is greater than c + d")
+a + b is greater than c + d
+
+jshell> int angle1 = 20
+angle1 ==> 20
+
+jshell> int angle2 = 60
+angle2 ==> 60
+
+jshell> int angle3 = 50
+angle3 ==> 50
+
+jshell> if (angle1 + angle2 + angle3 ==180)
+   ...> System.out.println("Valid Triangle")
+
+jshell> angle3 += 50
+$20 ==> 100
+
+jshell> angle3
+angle3 ==> 100
+
+jshell> angle2
+angle2 ==> 60
+
+jshell> angle1
+angle1 ==> 20
+
+jshell> angle2
+angle2 ==> 60
+
+jshell> if (angle1 + angle2 + angle3 ==180)
+   ...> System.out.println("Valid Triangle")
+Valid Triangle
+
+jshell> int number = 10
+number ==> 10
+
+jshell> number % 2
+$27 ==> 0
+
+jshell> 9 % 2
+$28 ==> 1
+
+jshell> 8 % 2
+$29 ==> 0
+
+jshell> if (number % 2 ==0)
+   ...>
+   ...> System.out.println("Even Number")
+Even Number
