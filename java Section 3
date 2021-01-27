@@ -777,3 +777,289 @@ jshell> if (number % 2 ==0)
    ...>
    ...> System.out.println("Even Number")
 Even Number
+jshell> int i = 5
+i ==> 5
+
+jshell> i > 5
+$2 ==> false
+
+jshell> i == 5
+$3 ==> true
+
+jshell> i == 6
+$4 ==> false
+
+jshell> if (i == 5)
+   ...> System.out.println("i is odd");
+i is odd
+
+
+jshell> if(i==5)
+   ...>  System.out.println ("i is odd"); System.out.println("i is prime");
+i is odd
+i is prime
+
+jshell> i == 6
+$8 ==> false
+
+jshell> i = 6
+i ==> 6
+
+jshell> if(i==5)
+   ...>  System.out.println ("i is odd"); System.out.println("i is prime");
+i is prime
+
+jshell> if(i==5)
+   ...> System.out.println("i is odd");
+
+jshell> if(i==5) {
+   ...>     System.out.println("i is odd");
+   ...>     System.out .println("i is prime");
+   ...> }                         ^
+
+jshell> int i = 1
+i ==> 1
+
+jshell> System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+5 * 1 = 5
+
+jshell> i = i + 1
+i ==> 2
+
+jshell> System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+5 * 2 = 10
+
+jshell> i = i + 1
+i ==> 3
+
+jshell> System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+5 * 3 = 15
+
+jshell>
+
+jshell> int i;
+i ==> 0                                        ^
+
+jshell> for ( i = 1; i<=10; i++) {
+   ...>     System .out.printf("%d * %d = %d", 5, i, 5*i).println();
+   ...> }
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+
+jshell>
+
+jshell> for( i =1; i<=10; i++) {
+   ...>     System.out.printf("%d * %d = %d", 6, i, 6*i).println();
+   ...> }
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+6 * 4 = 24
+6 * 5 = 30
+6 * 6 = 36
+6 * 7 = 42
+6 * 8 = 48
+6 * 9 = 54
+6 * 10 = 60
+
+jshell> for( i =1; i<=10; i++) {
+   ...>     System.out.printf("%d * %d = %d", 6, i, 6*i).println();
+   ...> }
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+6 * 4 = 24
+6 * 5 = 30
+6 * 6 = 36
+6 * 7 = 42
+6 * 8 = 48
+6 * 9 = 54
+6 * 10 = 60
+
+jshell> for( i =1; i<=10; i++) {
+   ...>     System.out.printf("%d * %d = %d", 7, i, 7*i).println();
+   ...> }
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70
+
+jshell> int table = 7;
+table ==> 7
+
+jshell> for( i =1; i<=10; i++) {
+   ...>     System.out.printf("%d * %d = %d", 7, i, table*i).println();
+   ...> }
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 4 = 28
+7 * 5 = 35
+7 * 6 = 42
+7 * 7 = 49
+7 * 8 = 56
+7 * 9 = 63
+7 * 10 = 70
+
+jshell> table = 8
+table ==> 8
+
+jshell> for( i =1; i<=10; i++) {
+   ...>     System.out.printf("%d * %d = %d", 7, i, table*i).println();
+   ...> }
+7 * 1 = 8
+7 * 2 = 16
+7 * 3 = 24
+7 * 4 = 32
+7 * 5 = 40
+7 * 6 = 48
+7 * 7 = 56
+7 * 8 = 64
+7 * 9 = 72
+7 * 10 = 80
+
+jshell> for ( i =1; i<=10; i++) {
+   ...>     System.out.printf("%d", i).println();
+   ...> }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+jshell> for ( i =10; i>=1; i--) {
+   ...>     System.out.printf("%d", i).println();
+   ...> }
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+jshell> for (i = 10; i>=1; i = i -2) {
+   ...>     System.out.printf("%d", i).println();
+   ...> }
+10
+8
+6
+4
+2
+
+jshell> for (i = 9; i>=1; i = i -2) {
+   ...>     System.out.printf("%d", i).println();
+   ...> }
+9
+7
+5
+3
+1
+
+jshell> for (i =1; i<=10; i++) {
+   ...>     System.out.printf("%d", i * i).println();
+   ...> }
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+324
+400
+
+jshell> for (i = 1; i<=20; i = i + 2) {
+   ...>     System.out.printf("%d", i * i).println();
+   ...> }
+1
+9
+25
+49
+81
+121
+169
+225
+289
+361
+
+jshell> int i = 1
+i ==> 1
+
+jshell> for ( ;i<=10;i++);
+
+jshell> i
+i ==> 11
+
+jshell> for (i=1 ;i<=10 ;i++);
+
+jshell> int j
+j ==> 0
+
+jshell> for (i=1, j=2 ;i<=10 ;i++, j++);
+
+jshell> i
+i ==> 11
+
+jshell> j
+j ==> 12
+
+jshell> for (i=1, j=2 ;i<=10 ;i++, j--);
+
+jshell> i
+i ==> 11
+
+jshell> j
+j ==> -8
+
+jshell> for (int i=1; i<=10; i++) {
+   ...>     System.out.println("No 1");
+   ...>     System.out.println("No 2");
+   ...> }
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+No 1
+No 2
+jshell>
+
