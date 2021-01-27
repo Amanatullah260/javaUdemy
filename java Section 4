@@ -1,0 +1,157 @@
+jshell> System.out.println("Hello World")
+Hello World
+
+jshell> System.out.println("Hello World");System.out.println("Hello World");
+Hello World
+Hello World
+
+jshell> void sayHelloWorldTwice(){
+   ...>     System.out.println("Hello World");
+   ...>     System.out.println("Hello World");
+   ...> }
+|  created method sayHelloWorldTwice()
+
+jshell> sayHelloWorldTwice()
+Hello World
+Hello World
+
+jshell> void sayHelloWorldThrice(){
+   ...>     System.out.println("Hello World");
+   ...>     System.out.println("Hello World");
+   ...>     System.out.println("Hello World");
+   ...> }
+|  created method sayHelloWorldThrice()
+
+jshell> sayHelloWorldThrice()
+Hello World
+Hello World
+Hello World
+
+jshell> void printLearningExperience(){
+   ...>     System.out.println("I've created my first variable");
+   ...>     System.out.println("I've created my first method");
+   ...>     System.out.println("I've created my first loop");
+   ...>     System.out.println("i'm excited to learn java");
+   ...> }
+|  created method printLearningExperience()
+
+jshell> printLearningExperience()
+I've created my first variable
+I've created my first method
+I've created my first loop
+i'm excited to learn java
+
+jshell> void NameOfMethod(){
+   ...> }
+|  created method NameOfMethod()
+
+jshell> /methods
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+
+jshell> /save backup.txt
+
+jshell> /edit sayHelloWorldTwice
+|  modified method sayHelloWorldTwice()
+
+jshell> sayHelloWorldTwice()
+HelloWorld
+HelloWorld
+
+jshell> /edit printLearningExperience()
+|  No such snippet: printLearningExperience()
+
+jshell> /edit printLearningExperience
+|  modified method printLearningExperience()
+
+jshell>  printLearningExperience()
+I've sdf my first variable
+I've ban my first method
+I've cre my first loop
+i'm exci to learn java
+
+jshell> /methods
+|    void sayHelloWorldThrice()
+|    void NameOfMethod()
+|    void sayHelloWorldTwice()
+|    void printLearningExperience()
+
+jshell> /edit pintningExperience
+|  No such snippet: pintningExperience
+
+jshell> /edit printLearningExperience
+|  modified method printLearningExperience()
+
+jshell>
+
+jshell>
+
+jshell> /edit sayHelloWorldTwice
+|  modified method sayHelloWorldTwice()
+
+jshell> /list printLearningExperience
+
+  15 : void printLearningExperience(){
+           System.out.println("I've sdf my first variable");
+           System.out.println("I've ba my first method");
+           System.out.println("I've cr my first loop");
+           System.out.println("i'm excto learn java");
+       }
+
+jshell> /methods
+|    void sayHelloWorldThrice()
+|    void NameOfMethod()
+|    void printLearningExperience()
+|    void sayHelloWorldTwice()
+
+jshell> say HelloWorldThrice()
+   ...> sayHelloWorldThrice()
+   ...> }
+|  Error:
+|  ';' expected
+|  say HelloWorldThrice()
+|                        ^
+
+jshell> sayHelloWorldThrice()
+Hello World
+Hello World
+Hello World
+
+jshell> sayHelloWorldTwice()
+Hello World
+HelloWorld
+
+jshell> void sayHelloWorld(int noOFTimes) {
+   ...>     //Body of the method
+   ...> }
+|  created method sayHelloWorld(int)
+
+jshell> sayHelloWorld(1)
+
+jshell> //I'm writing something
+
+jshell> int i=10;//I has a value of 10
+i ==> 10
+
+jshell> /edit sayHelloWorld
+|  modified method sayHelloWorld(int), however, it cannot be invoked until variable noOfTimes is declared
+
+jshell> sayHelloWorld(1)
+|  attempted to call method sayHelloWorld(int) which cannot be invoked until variable noOfTimes is declared
+
+
+jshell> sayHelloWorld(1)
+|  attempted to call method sayHelloWorld(int) which cannot be invoked until variable noOfTimes is declared
+
+jshell> /list sayHelloWorld
+
+  22 : void sayHelloWorld(int noOFTimes) {
+           System.out.println(noOfTimes);
+       }
+
+jshell> /edit sayHelloWorld
+|  modified method sayHelloWorld(int), however, it cannot be invoked until variable noOfTimes is declared
+
+jshell>
