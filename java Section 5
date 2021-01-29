@@ -1,0 +1,74 @@
+jshell>  System.out.println("I love jshell");
+I love jshell
+
+jshell>  class Country {
+   ...> }
+|  created class Country
+
+jshell> Country india = new Country()
+india ==> Country@4ccabbaa
+
+jshell> Country usa = new Country()
+usa ==> Country@2d38eb89
+
+jshell> class planet {
+   ...> }
+|  created class planet
+
+jshell> planet planet=new planet ()
+planet ==> planet@4d76f3f8
+
+jshell> planet earth = new planet()
+earth ==> planet@23ab930d
+
+jshell> planet venus = new planet()
+venus ==> planet@3fa77460
+
+jshell> class planet {
+   ...>     void revolve() {
+   ...>         System.out.println("Revolve");
+   ...>     }
+   ...> }
+|  replaced class planet
+|    update replaced variable planet, reset to null
+|    update replaced variable earth, reset to null
+|    update replaced variable venus, reset to null
+
+jshell> planet earth = new planet()
+earth ==> planet@6438a396
+
+jshell> planet venus = new planet()
+venus ==> planet@e2144e4
+
+jshell> planet.revolve()
+|  Exception java.lang.NullPointerException: Cannot invoke "REPL.$JShell$44C$planet.revolve()" because "REPL.$JShell$45B.planet" is null
+|        at (#39:1)
+
+jshell> earth.revolve()
+Revolve
+
+jshell> venus.revolve()
+Revolve
+
+jshell> class Country {
+   ...>     void comingSoon() {
+   ...>         System.out.println("Coming Soon");
+   ...>     }
+   ...> }
+|  replaced class Country
+|    update replaced variable india, reset to null
+|    update replaced variable usa, reset to null
+
+jshell> Country india = new Country()
+india ==> Country@14899482
+
+jshell> Country netherlands = new Country()
+netherlands ==> Country@2aae9190
+
+jshell> india.comingSoon()
+Coming Soon
+
+jshell> netherlands.comingSoon()
+Coming Soon
+
+jshell>
