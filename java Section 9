@@ -1,0 +1,174 @@
+jshell> Byte.SIZE
+$1 ==> 8
+
+jshell> Byte.BYTES
+$2 ==> 1
+
+jshell> Byte.MAX_VALUE
+$3 ==> 127
+
+jshell> Byte.MIN_VALUE
+$4 ==> -128
+
+jshell> Short.BYTES
+$5 ==> 2
+
+jshell> Integer.BYTES
+$6 ==> 4
+
+jshell> Long.BYTES
+$7 ==> 8
+
+jshell> Integer.MAX_VALUE
+$8 ==> 2147483647
+
+jshell> int i = 1000;
+i ==> 1000
+
+jshell> long l = 500000000;
+l ==> 500000000
+
+jshell> long l = 50000000000l;
+l ==> 50000000000
+
+jshell> i = (int) l
+i ==> -1539607552
+
+jshell> l = i
+l ==> -1539607552
+
+jshell>  int eight = 010;
+eight ==> 8
+
+jshell> int eight = 101;
+eight ==> 101
+
+jshell> int sixteen = 0x10;
+sixteen ==> 16
+
+jshell> int fifteen = 0xf;
+fifteen ==> 15
+
+jshell> int big = 0xBBAACC;
+big ==> 12298956
+
+jshell> byte b = 127;
+b ==> 127
+
+jshell> Short.MAX_VALUE
+$20 ==> 32767
+
+jshell> int i = 3456;
+i ==> 3456
+
+jshell> short s = (short) i
+s ==> 3456
+
+jshell> int i1 = s
+i1 ==> 3456
+
+jshell> int i = 10;
+i ==> 10
+
+jshell> int j = i++;
+j ==> 10
+
+jshell> i
+i ==> 11
+
+jshell> int i = 10;
+i ==> 10
+
+jshell> int j = ++i;
+j ==> 11
+
+jshell> i
+i ==> 11
+
+jshell> int i = 10;
+i ==> 10
+
+jshell> int j = i--;
+j ==> 10
+
+jshell> i
+i ==> 9
+
+jshell> int i = 10;
+i ==> 10
+
+jshell> int j = --i;
+j ==> 9
+
+jshell> i
+i ==> 9
+
+jshell>
+
+public class BiNumberRunner {
+
+	public static void main(String[] args) {
+
+		BiNumber numbers = new BiNumber(2, 3);
+
+		System.out.println(numbers.add());//2+3
+		System.out.println(numbers.multiply());//2*3
+
+		numbers.doubleValue();// double both numbers
+
+		System.out.println(numbers.getNumber1());//4
+		System.out.println(numbers.getNumber2());//6
+
+	}
+
+}
+
+
+package com.in28minutes.primitive.datatypes;
+
+public class BiNumber {
+	private int number1;
+	private int number2;
+
+	public int getNumber1() {
+		return number1;
+	}
+
+	public void setNumber1(int number1) {
+		this.number1 = number1;
+	}
+
+	public int getNumber2() {
+		return number2;
+	}
+
+	public void setNumber2(int number2) {
+		this.number2 = number2;
+	}
+
+	public BiNumber(int number1, int number2) {
+		this.number1 = number1;
+		this.number2 = number2;
+
+	}
+
+	public int add() {
+		return number1 + number2;
+	}
+
+	public int multiply() {
+		return number1 * number2;
+	}
+
+	public void doubleValue() {
+		this.number1 *= 2;
+		this.number2 *= 2;
+
+	}
+}
+
+output:
+5
+6
+4
+6
