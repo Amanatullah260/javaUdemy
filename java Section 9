@@ -33,6 +33,614 @@ l ==> 50000000000
 
 jshell> i = (int) l
 i ==> -1539607552
+package com.in28minutes.primitive.datatypes;
+
+import java.math.BigDecimal;
+
+public class SimpleInterestCalculator {
+
+	BigDecimal principal;
+
+	BigDecimal interest;
+
+	public SimpleInterestCalculator(String principal, String interest) {
+		this.principal = new BigDecimal(principal);
+		this.interest = new BigDecimal(interest).divide(new BigDecimal(100));
+	}
+
+	public BigDecimal calculateTotalValue(int noOfYears) {
+		// Total Value = principal + interest * noOfYears;
+		BigDecimal noOfYearsBigDecimal = new BigDecimal(noOfYears);
+		BigDecimal totalValue = principal.add(principal.multiply(interest).multiply(noOfYearsBigDecimal));
+		return totalValue;
+	}
+}
+
+
+
+package com.in28minutes.primitive.datatypes;
+
+import java.math.BigDecimal;
+
+public class SimpleInterestCalculatorRunner {
+
+
+	public static void main(String[] args) {
+
+		SimpleInterestCalculator calculator = new SimpleInterestCalculator("4500.00", "7.5");
+		BigDecimal totalValue = calculator.calculateTotalValue(5);// 5 years
+                //6187.50000
+		System.out.println(totalValue);
+
+	}
+
+}
+
+Output:
+6187.50000
+
+
+
+
+
+Q1:
+                MyChar myChar = new MyChar('c');
+		System.out.println(myChar.isVowel());
+		// 'a','e','i','o','u' and capitals
+		// Systrm.out.println(MyChar.isNumber());
+		// Systrm.out.println(MyChar.isAlphabet());
+		// MyChar.printLowerCaseAlphabets();
+		// MyChar.printUpperCaseAlphabets();
+
+solution:
+package com.in28minutes.primitive.datatypes;
+
+public class MyCharRunner {
+
+	public static void main(String[] args) {
+		MyChar myChar = new MyChar('c');
+		System.out.println(myChar.isVowel());
+		// 'a','e','i','o','u' and capitals
+		// Systrm.out.println(MyChar.isNumber());
+		// Systrm.out.println(MyChar.isAlphabet());
+		// MyChar.printLowerCaseAlphabets();
+		// MyChar.printUpperCaseAlphabets();
+
+	}
+
+}
+
+package com.in28minutes.primitive.datatypes;
+
+public class MyChar {
+
+	private char ch;
+
+	public MyChar(char c) {
+		this.ch = ch;
+	}
+
+	public boolean isVowel() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
+ output:
+false
+
+
+
+
+Microsoft Windows [Version 10.0.16299.1087]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\amanat>java -version
+java version "15.0.1" 2020-10-20
+Java(TM) SE Runtime Environment (build 15.0.1+9-18)
+Java HotSpot(TM) 64-Bit Server VM (build 15.0.1+9-18, mixed mode, sharing)
+
+C:\Users\amanat>jshell
+|  Welcome to JShell -- Version 15.0.1
+|  For an introduction type: /help intro
+
+jshell> BigDecimal number10 = new BigDecimal(34.2234);
+number10 ==> 34.223399999999998044586391188204288482666015625
+
+jshell> BigDecimal number11 = new BigDecimal(34.56789);
+number11 ==> 34.56788999999999845158527023158967494964599609375
+
+jshell> BigDecimal number10 = new BigDecimal("34.2234");
+number10 ==> 34.2234
+
+jshell> BigDecimal number10 = new BigDecimal("34.2234");
+number10 ==> 34.2234
+
+jshell> number10 + number11
+|  Error:
+|  bad operand types for binary operator '+'
+|    first type:  java.math.BigDecimal
+|    second type: java.math.BigDecimal
+|  number10 + number11
+|  ^-----------------^
+
+jshell> number10.add(number11)
+$5 ==> 68.79128999999999845158527023158967494964599609375
+
+jshell> number10.multiply(number11)
+$6 ==> 1183.030726625999947007983337243786081671714782714843750
+
+jshell> boolean isValue = false
+isValue ==> false
+
+jshell> boolean isValid = false
+isValid ==> false
+
+jshell> int i = 7;
+i ==> 7
+
+jshell> i>7
+$10 ==> false
+
+jshell> i>=7
+$11 ==> true
+
+jshell> i<7
+$12 ==> false
+
+jshell> i<=7
+$13 ==> true
+
+jshell> i == 8
+$14 ==> false
+
+jshell> i = 8
+i ==> 8
+
+jshell> i = 7
+i ==> 7
+
+jshell> i == 7
+$17 ==> true
+
+jshell> int i = 17
+i ==> 17
+
+jshell> i>=15
+$19 ==> true
+
+jshell> i<=25
+$20 ==> true
+
+jshell> i>=15 && i<=25
+$21 ==> true
+
+jshell> i = 30
+i ==> 30
+
+jshell> i>=15 && i<=25
+$23 ==> false
+
+jshell> i = 5
+i ==> 5
+
+jshell> true && true
+$25 ==> true
+
+jshell> false && false
+$26 ==> false
+
+jshell> true && false
+$27 ==> false
+
+jshell> false && true
+$28 ==> false
+
+jshell> false || true
+$29 ==> true
+
+jshell> true || false
+$30 ==> true
+
+jshell> true || true
+$31 ==> true
+
+jshell> false || false
+$32 ==> false
+
+jshell> false ^ false
+$33 ==> false
+
+jshell> false ^ true
+$34 ==> true
+
+jshell> true ^ false
+$35 ==> true
+
+jshell> true ^ true
+$36 ==> false
+
+jshell> !true
+$37 ==> false
+
+jshell> !false
+$38 ==> true
+
+jshell> !x>7
+|  Error:
+|  cannot find symbol
+|    symbol:   variable x
+|  !x>7
+|   ^
+
+jshell> int x = 7
+x ==> 7
+
+jshell> !(x>7)
+$40 ==> true
+
+jshell> int i = 10
+i ==> 10
+
+jshell> int j = 15
+j ==> 15
+
+jshell> j>15 && i++>5
+$43 ==> false
+
+jshell> j
+j ==> 15
+
+jshell> i
+i ==> 10
+
+jshell> j>15 & i++>5
+$46 ==> false
+
+jshell> j
+j ==> 15
+
+jshell> i
+i ==> 11
+
+jshell> i++;
+$49 ==> 11
+
+jshell> j>15 && i>5
+$50 ==> false
+
+jshell> char ch = a
+|  Error:
+|  cannot find symbol
+|    symbol:   variable a
+|  char ch = a;
+|            ^
+
+jshell> char ch = 'a'
+ch ==> 'a'
+
+jshell> char ch = 'ab'
+|  Error:
+|  unclosed character literal
+|  char ch = 'ab'
+|            ^
+
+jshell> char ch = 'a'
+ch ==> 'a'
+
+jshell> char ch2 = '\u0022'
+ch2 ==> '"'
+
+jshell> char ch = '\u00A2'
+ch ==> '¢'
+
+jshell> char ch = 65
+ch ==> 'A'
+
+jshell> ch++
+$56 ==> 'A'
+
+jshell> ch
+ch ==> 'B'
+
+jshell> ++ch
+$58 ==> 'C'
+
+jshell> ++ch
+$59 ==> 'D'
+
+jshell> ch + 5
+$60 ==> 73
+
+jshell> ch
+ch ==> 'D'
+
+jshell>
+
+jshell> (int)ch
+$62 ==> 68
+
+jshell> char ch = '\n'
+ch ==> '\n'
+
+jshell> System.out.println(ch);
+
+
+
+jshell> char ch = '\t'
+ch ==> '\t'
+
+jshell> System.out.println();
+
+
+jshell>
+
+
+
+package com.in28minutes.primitive.datatypes;
+
+public class MyChar {
+
+	private char ch;
+
+	public MyChar(char c) {
+		this.ch = ch;
+	}
+
+	public boolean isVowel() {
+		// 'a' e i o u or A E I O U
+		if (ch == 'a') {
+			return true;
+		}
+
+		if (ch == 'e') {
+			return true;
+		}
+
+		if (ch == 'i') {
+			return true;
+		}
+
+		if (ch == 'o') {
+			return true;
+		}
+
+		if (ch == 'u') {
+			return true;
+		}
+		return false;
+	}
+	public boolean isDigit() {
+		if (ch >= 48 && ch <= 57) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public boolean isAlphabet() {
+		if (ch >= 97 && ch <= 122) {
+			return true;
+		}
+
+		if (ch >= 65 && ch <= 90) {
+			return true;
+		}
+		return false;
+	}
+}
+
+
+
+package com.in28minutes.primitive.datatypes;
+
+public class MyCharRunner {
+
+	public static void main(String[] args) {
+		MyChar myChar = new MyChar('A');
+		System.out.println(myChar.isVowel());
+		// myChar.isConsonant();
+		// 'a','e','i','o','u' and capitals
+		System.out.println(myChar.isDigit());
+		System.out.println(myChar.isAlphabet());
+		// MyChar.printLowerCaseAlphabets();
+		// MyChar.printUpperCaseAlphabets();
+
+	}
+
+}
+Output:
+false
+true
+false
+
+
+if (ch >= 65 && ch <= 90) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean isConsonant() {
+		// Alphabet and it is not vowel
+		// ! [a,e,i,o,u]
+		if (isAlphabet() && !isVowel()) {
+			return true;
+		}
+		return false;
+	}
+public static void main(String[] args) {
+		MyChar myChar = new MyChar('A');
+		System.out.println(myChar.isVowel());
+		// 'a','e','i','o','u' and capitals
+		System.out.println(myChar.isDigit());
+		System.out.println(myChar.isAlphabet());
+		System.out.println(myChar.isConsonant());
+		// MyChar.printLowerCaseAlphabets();
+		// MyChar.printUpperCaseAlphabets();
+
+
+Output:
+false
+false
+true
+true
+
+
+
+
+public class MyChar {
+
+	private char ch;
+
+	public MyChar(char c) {
+		this.ch = ch;
+	}
+
+	public boolean isVowel() {
+		// 'a' e i o u or A E I O U
+		if (ch == 'a') {
+			return true;
+		}
+
+		if (ch == 'e') {
+			return true;
+		}
+
+		if (ch == 'i') {
+			return true;
+		}
+
+		if (ch == 'o') {
+			return true;
+		}
+
+		if (ch == 'u') {
+			return true;
+		}
+		return false;
+	}
+	public boolean isDigit() {
+		if (ch >= 48 && ch <= 57) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public boolean isAlphabet() {
+		if (ch >= 97 && ch <= 122) {
+			return true;
+		}
+
+		if (ch >= 65 && ch <= 90) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean isConsonant() {
+		// Alphabet and it is not vowel
+		// ! [a,e,i,o,u]
+		if (isAlphabet() && !isVowel()) {
+			return true;
+		}
+		return false;
+	}
+
+	public static void printLowerCaseAlphabets() {
+		// TODO Auto-generated method stub
+		for (char ch = 'a'; ch <= 'z'; ch++) {
+			System.out.println(ch);
+		}
+	}
+
+	public static void printUpperCaseAlphabets() {
+
+		for(char ch = 'A'; ch <='Z'; ch++) {
+			System.out.println(ch);
+		}
+
+	}
+
+
+}
+
+
+
+public static void main(String[] args) {
+		MyChar myChar = new MyChar('A');
+		System.out.println(myChar.isVowel());
+		// 'a','e','i','o','u' and capitals
+		System.out.println(myChar.isDigit());
+		System.out.println(myChar.isAlphabet());
+		System.out.println(myChar.isConsonant());
+		MyChar.printLowerCaseAlphabets();
+		MyChar.printUpperCaseAlphabets();
+
+	}
+
+}
+
+
+OUTPUT:
+false
+false
+true
+false
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
 
 jshell> l = i
 l ==> -1539607552
