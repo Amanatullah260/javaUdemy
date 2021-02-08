@@ -205,3 +205,215 @@ private static void puzzle5() {
 OUTPUT:
 6
 
+package com.in28minutes.ifstatement.examples;
+
+import java.util.Scanner;
+
+public class MenuRunner {
+	public static void main(String[] args) {
+		// Type obj = new Type(arguments);
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Enter Number1: ");
+		int number1 = scanner.nextInt();
+		System.out.println("the number you entered is - " + number1);
+	}
+}
+
+
+output:
+Enter Number1: 
+35
+the number you entered is - 35
+
+
+
+package com.in28minutes.ifstatement.examples;
+
+import java.util.Scanner;
+
+        public class MenuRunner {
+	public static void main(String[] args) {
+		// Type obj = new Type(arguments);
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Enter Number1: ");
+		int number1 = scanner.nextInt();
+		System.out.println("the number you entered is - " + number1);
+
+		System.out.println("Enter Number2: ");
+		int number2 = scanner.nextInt();
+
+		System.out.println("Choices Available are ");
+		System.out.println("1 - Add");
+		System.out.println("2 - Subtract");
+		System.out.println("3 - Divide");
+		System.out.println("4 - Multiply");
+
+		System.out.println("Enter choice");
+		int choice = scanner.nextInt();
+
+		System.out.println("Your Choices are");
+		System.out.println("Number1 " + number1);
+		System.out.println("Number2" + number2);
+		System.out.println("Choice" + choice);
+
+	}
+}
+
+
+OUTPUT:
+
+Enter Number1: 25
+Enter Number2: 50
+Choice Available are
+1 - Add
+2 - Subtract
+3 - Divide
+4 - Multiply
+Enter Choice: 4
+Your choice are
+Number1 25
+Number2 50
+Choice 4
+                System.out.println("Enter Number1: ");
+		int number1 = scanner.nextInt();
+		System.out.println("the number you entered is - " + number1);
+
+		System.out.println("Enter Number2: ");
+		int number2 = scanner.nextInt();
+
+		System.out.println("Choices Available are ");
+		System.out.println("1 - Add");
+		System.out.println("2 - Subtract");
+		System.out.println("3 - Divide");
+		System.out.println("4 - Multiply");
+
+		System.out.println("Enter choice");
+		int choice = scanner.nextInt();
+
+		System.out.println("Your Choices are");
+		System.out.println("Number1 " + number1);
+		System.out.println("Number2" + number2);
+		System.out.println("Choice" + choice);
+
+		if (choice == 1) {
+			System.out.println("Result" + (number1 + number2));
+		} else if (choice == 2) {
+			System.out.println("Result" + (number1 - number2));
+		} else if (choice == 3) {
+			System.out.println("Result" + (number1 / number2));
+		} else if (choice == 4) {
+			System.out.println("Result" + (number1 * number2));
+		}
+
+	}
+}
+
+OUTPUT:
+Enter Number1: 
+23
+the number you entered is - 23
+Enter Number2: 
+10
+Choices Available are 
+1 - Add
+2 - Subtract
+3 - Divide
+4 - Multiply
+Enter choice
+ 2
+Your Choices are
+Number1 23
+Number2 10
+Choice 2
+Result 13
+
+           performOperationUsingNestedIfElse(number1, number2, choice);
+
+	}
+
+	private static void performOperationUsingNestedIfElse(int number1, int number2, int choice) {
+		if (choice == 1) {
+			System.out.println("Result" + (number1 + number2));
+		} else if (choice == 2) {
+			System.out.println("Result" + (number1 - number2));
+		} else if (choice == 3) {
+			System.out.println("Result" + (number1 / number2));
+		} else if (choice == 4) {
+			System.out.println("Result" + (number1 * number2));
+		} else {
+			System.out.println("Invalid Operation");
+		}
+	}
+
+	private static void performOperationUsingSwitch(int number1, int number2, int choice) {
+		switch (choice) {
+		case 1:
+			System.out.println("Result" + (number1 + number2));
+			break;
+		case 2:
+			System.out.println("Result" + (number1 - number2));
+			break;
+		case 3:
+			System.out.println("Result" + (number1 / number2));
+			break;
+		case 4:
+			System.out.println("Result" + (number1 * number2));
+			break;
+		default:
+			System.out.println("Invalid Operation");
+			break;
+
+		}
+	}
+}
+
+OUTPUT:
+Enter Number1: 
+10
+the number you entered is - 10
+Enter Number2: 
+10
+Choices Available are 
+1 - Add
+2 - Subtract
+3 - Divide
+4 - Multiply
+Enter choice
+4
+Your Choices are
+Number1 10
+Number210
+Choice4
+Result100
+
+jshell> int i = 5;
+i ==> 5
+
+jshell> switch (i) {
+   ...>     case 1 : System.out.println("1");
+   ...>     case 5 : System.out.println("5");
+   ...>     default : System.out.println("default");
+   ...> }
+5
+default
+
+jshell> i = 1
+i ==> 1
+
+jshell> switch (i) {
+   ...>     case 1 : System.out.println("1");
+   ...>     case 5 : System.out.println("5");
+   ...>     default : System.out.println("default");
+   ...> }
+1
+5
+default
+
+jshell> switch (i) {
+   ...>     case 1 : System.out.println("1"); break;
+   ...>     case 5 : System.out.println("5"); break;
+   ...>     default : System.out.println("default"); break;
+   ...> }
+1
