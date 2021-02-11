@@ -191,3 +191,185 @@ output:
 1 2 3 4 
 1 2 3 4 5 
 
+package com.in28minutes.loops;
+
+public class whileNumberPlayerRunner {
+	public static void main(String[] args) {
+		whileNumberPlayer player = new whileNumberPlayer(30);
+		player.printSquaresUptoLimit();
+		player.printCubesUptoLimit();
+
+	}
+}
+
+public class whileNumberPlayer {
+
+	private int limit;
+
+	public whileNumberPlayer(int limit) {
+		this.limit = limit;
+	}
+
+	// for limit = 30, output would be 1 4 9 16 25
+	public void printSquaresUptoLimit() {
+		int i = 1;
+		while (i * i < 30) {
+			System.out.print(i * i + " ");
+			i++;
+		}
+
+	}
+
+	// for limit = 30, output would be 1 8 27
+	public void printCubesUptoLimit() {
+
+	}
+
+}
+
+OUTPUT:
+1 4 9 16 25
+
+
+// for limit = 30, output would be 1 4 9 16 25
+	public void printSquaresUptoLimit() {
+		int i = 1;
+		while (i * i < limit) {
+			System.out.print(i * i + " ");
+			i++;
+		}
+
+	}
+
+	// for limit = 30, output would be 1 8 27
+	public void printCubesUptoLimit() {
+		int i = 1;
+		while (i * i < limit) {
+			System.out.print(i * i + " ");
+			i++;
+		}
+	}
+}
+	
+output:
+1 4 9 16 25 36 49 64 81 1 8 27 64 
+
+
+
+package com.in28minutes.loops;
+
+import java.util.Scanner;
+
+public class DoWhileRepeatedQuestionRunner {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		int number = 0;
+		do {
+		System.out.print("Enter a number: ");
+			number = scanner.nextInt();
+		System.out.println("Cube is " + (number * number * number));
+		} while (number >= 0);
+	}
+
+}
+
+output:
+Enter a number: 12
+Cube is 1728
+Enter a number: 6
+Cube is 216
+Enter a number: 2
+Cube is 8
+Enter a number: 0
+Cube is 0
+Enter a number: -1
+Cube is -1
+
+
+                Scanner scanner = new Scanner(System.in);
+		int number = 0;
+		do {
+			System.out.println("Cube is " + (number * number * number));
+		System.out.print("Enter a number: ");
+			number = scanner.nextInt();
+		} while (number >= 0);
+		System.out.println("Thank You! Have Fun!");
+	}
+
+}
+output:
+Cube is 0
+Enter a number: 10
+Cube is 1000
+Enter a number: 2
+Cube is 8
+Enter a number: -1
+Thank You! Have Fun!
+
+C:\Users\amanat>jshel
+'jshel' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\amanat>jshell
+|  Welcome to JShell -- Version 15.0.1
+|  For an introduction type: /help intro
+
+jshell> int i = 5
+i ==> 5
+
+jshell> while (i < 5) {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> }
+
+jshell> i
+i ==> 5
+
+jshell> i = 1
+i ==> 1
+
+jshell> do {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> } while (i<5)
+1 2 3 4
+jshell> i = 10
+i ==> 10
+
+jshell> while (i < 5) {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> }
+
+jshell> do {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> } while (i<5)
+10
+jshell> for(i=1;i<=10;i++) {
+   ...>     if(i==5)
+   ...>     break;
+   ...>     System.out.print(i + " ");
+   ...> }
+1 2 3 4
+jshell>  for(i=1;i<=10;i++) {
+   ...>     if(i%2==0)
+   ...>     break;
+   ...>     System.out.print(i + " ");
+   ...> }
+1
+jshell>  for(i=1;i<=10;i++) {
+   ...>     if(i%2==0)
+   ...>     continue;
+   ...>     System.out.print(i + " ");
+   ...> }
+1 3 5 7 9
+jshell> for(i=1;i<=10;i++) {
+   ...>     if(i%2!=0)
+   ...>      continue;
+   ...>     System.out.print(i + " ");
+   ...> }
+2 4 6 8 10
+jshell>
