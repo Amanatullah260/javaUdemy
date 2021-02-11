@@ -1,0 +1,434 @@
+C:\Users\amanat>jshell
+|  Welcome to JShell -- Version 15.0.1
+|  For an introduction type: /help intro
+
+jshell> int i = 5
+i ==> 5
+
+jshell> while (i < 5) {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> }
+
+jshell> i
+i ==> 5
+
+jshell> i = 1
+i ==> 1
+
+jshell> do {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> } while (i<5)
+1 2 3 4
+jshell> i = 10
+i ==> 10
+
+jshell> while (i < 5) {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> }
+
+jshell> do {
+   ...>     System.out.print(i + " ");
+   ...>     i++;
+   ...> } while (i<5)
+10
+jshell> for(i=1;i<=10;i++) {
+   ...>     if(i==5)
+   ...>     break;
+   ...>     System.out.print(i + " ");
+   ...> }
+1 2 3 4
+jshell>  for(i=1;i<=10;i++) {
+   ...>     if(i%2==0)
+   ...>     break;
+   ...>     System.out.print(i + " ");
+   ...> }
+1
+jshell>  for(i=1;i<=10;i++) {
+   ...>     if(i%2==0)
+   ...>     continue;
+   ...>     System.out.print(i + " ");
+   ...> }
+1 3 5 7 9
+jshell> for(i=1;i<=10;i++) {
+   ...>     if(i%2!=0)
+   ...>      continue;
+   ...>     System.out.print(i + " ");
+   ...> }
+2 4 6 8 10
+jshell>  int i = 5;
+i ==> 5
+
+jshell> class Animal {
+   ...>     int id;
+   ...>     Animal(int id) {
+   ...>         this.id = id;
+   ...>     }
+   ...> }
+|  created class Animal
+
+jshell> Animal dog = new Animal(12);
+dog ==> Animal@4459eb14
+
+jshell> Animal nothing;
+nothing ==> null
+
+jshell> nothing = dog
+nothing ==> Animal@4459eb14
+
+jshell> nothing.id
+$19 ==> 12
+
+jshell> int j = i
+j ==> 5
+
+jshell> j
+j ==> 5
+
+jshell> j = 6
+j ==> 6
+
+jshell> i
+i ==> 5
+
+jshell> i==j
+$24 ==> false
+
+jshell> j = 5
+j ==> 5
+
+jshell> i==j
+$26 ==> true
+
+
+jshell> Animal dog = new Animal(12)
+dog ==> Animal@470e2030
+
+jshell> Animal cat = new Animal(10)
+cat ==> Animal@33833882
+
+jshell> Animal ref = cat;
+ref ==> Animal@33833882
+
+jshell> Animal dog2 = new Animal(12)
+dog2 ==> Animal@e2d56bf
+
+jshell> cat == dog
+$31 ==> false
+
+jshell> cat == ref
+$32 ==> true
+
+jshell> dog == dog2
+$33 ==> false
+
+jshell>
+
+C:\Users\amanat>jshell
+|  Welcome to JShell -- Version 15.0.1
+|  For an introduction type: /help intro
+
+jshell> "Test".length()
+$1 ==> 4
+
+jshell> String str = "Test"
+str ==> "Test"
+
+jshell> BigDecimal bd = new BigDecimal("1.0");
+bd ==> 1.0
+
+jshell> String str = new String("Test")
+str ==> "Test"
+
+jshell> String str = "Test"
+str ==> "Test"
+
+jshell> str.charAt(0)
+$6 ==> 'T'
+
+jshell> str.charAt(2)
+$7 ==> 's'
+
+jshell> str.charAt(3)
+$8 ==> 't'
+
+jshell> String biggerString = "This is a lot of text"
+biggerString ==> "This is a lot of text"
+
+jshell> biggerString.substring(5)
+$10 ==> "is a lot of text"
+
+jshell> biggerString.substring(5,13)
+$11 ==> "is a lot"
+
+jshell> biggerString.charAt(13)
+$12 ==> ' '
+
+jshell> biggerString.charAt(13)
+$13 ==> ' '
+
+jshell> String someString = "This is a lot of text again"
+someString ==> "This is a lot of text again"
+
+jshell> someString.length()
+$15 ==> 27
+
+jshell> someString.charAt(5)
+$16 ==> 'i'
+
+jshell> for(int i=0; i<someString.length(); i++) {
+   ...>     System.out.println(someString.charAt(i));
+   ...> }
+T
+h
+i
+s
+
+i
+s
+
+a
+
+l
+o
+t
+
+o
+f
+
+t
+e
+x
+t
+
+a
+g
+a
+i
+n
+
+jshell> someString.indexOf("lot")
+$18 ==> 10
+
+jshell> someString.charAt(10)
+$19 ==> 'l'
+
+jshell> someString.indexOf('i')
+$21 ==> 2
+
+jshell> someString.lastIndexOf('i')
+$22 ==> 25
+
+jshell> someString.startsWith("ydgg")
+$23 ==> false
+
+jshell> someString.endsWith("in")
+$24 ==> true
+
+jshell> someString.endsWith("again")
+$25 ==> true
+
+jshell> someString.endsWith("againfsda")
+$26 ==> false
+
+jshell> someString.isEmpty()
+$27 ==> false
+
+jshell> "hfggsejhs".isEmpty()
+$28 ==> false
+
+
+
+jshell> "true".equals("true")
+$29 ==> true
+
+jshell> "value".equals("value")
+$30 ==> true
+
+jshell> String str = "value"
+str ==> "value"
+
+jshell> str.equals("value")
+$32 ==> true
+
+jshell> str.equals("VALue")
+$33 ==> false
+
+jshell> String str = "in28Minutes"
+str ==> "in28Minutes"
+
+jshell> str.concat("is awesome");
+$35 ==> "in28Minutesis awesome"
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> String anotherString = str.concat("is awesome");
+anotherString ==> "in28Minutesis awesome"
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> anotherString
+anotherString ==> "in28Minutesis awesome"
+
+jshell> String string2 = anotherString.concat(".");
+string2 ==> "in28Minutesis awesome."
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> anotherString
+anotherString ==> "in28Minutesis awesome"
+
+jshell> string2
+string2 ==> "in28Minutesis awesome."
+
+jshell> String str = "in28Minutes is awesome."
+str ==> "in28Minutes is awesome."
+
+jshell> str.toUpperCase()
+$45 ==> "IN28MINUTES IS AWESOME."
+
+jshell> str.toLowerCase()
+$46 ==> "in28minutes is awesome."
+
+jshell> 1  + 2
+$47 ==> 3
+
+jshell> "1"+ "2"
+$48 ==> "12"
+
+jshell> "1" + 2
+$49 ==> "12"
+
+jshell> "1" + 13
+$50 ==> "113"
+
+jshell> 1 + 13
+$51 ==> 14
+
+jshell> 1 + "23"
+$52 ==> "123"
+
+jshell> 1 + 2 + "3"
+$53 ==> "33"
+
+jshell> "1" + 2 + 3
+$54 ==> "123"
+
+jshell> System.out.println("Value is " + 20)
+Value is 20
+
+jshell> System.out.println("Value is " + 20 + 20)
+Value is 2020
+
+jshell> System.out.println("Value is " + (20 + 20))
+Value is 40
+
+jshell> String.join(", ", "A")
+$58 ==> "A"
+
+jshell> String.join(", ", "A", "B", "C")
+$59 ==> "A, B, C"
+
+jshell> String.join(", ", "2", "3", "4")
+$60 ==> "2, 3, 4"
+
+jshell> String.join(", ", "A", "B")
+$61 ==> "A, B"
+
+jshell> "abcd".replace('a', 'z');
+$62 ==> "zbcd"
+
+jshell> "abcd".replace("a", "xyz");
+$63 ==> "xyzbcd"
+
+jshell> String str = "hdtrj"
+str ==> "hdtrj"
+
+jshell> "123"+"123"+"1234"+"12345"
+$65 ==> "123123123412345"
+
+
+jshell>  StringBuffer sb = new StringBuffer("Test");
+sb ==> Test
+
+jshell> sb.append("123")
+$67 ==> Test123
+
+jshell> sb
+sb ==> Test123
+
+jshell> sb.setCharAt(1,'e')
+
+jshell> sb
+sb ==> Test123
+
+jshell> StringBuilder sb = new StringBuilder("Test");
+sb ==> Test
+
+jshell> int i = 5
+i ==> 5
+
+jshell> Integer integer = new Integer(5);
+integer ==> 5
+
+jshell> Integer integer1 = new Integer(5);
+integer1 ==> 5
+
+jshell> Integer integer = Integer.valueOf(5);
+integer ==> 5
+
+jshell> Integer integer1= Integer.valueOf(5);
+integer1 ==> 5
+
+jshell> Integer integer = new Integer("5234");
+integer ==> 5234
+
+jshell> Integer i1 = new Integer(5)
+i1 ==> 5
+
+jshell> Integer i2 = new Integer(5)
+i2 ==> 5
+
+jshell> Integer i3 = Integer.valueOf(5)
+i3 ==> 5
+
+jshell> Integer i4 = Integer.valueOf(5)
+i4 ==> 5
+
+jshell> i1 == i2
+$82 ==> false
+
+jshell> i3 == i4
+$83 ==> true
+
+
+jshell> Integer seven = Integer.valueOf(7);
+seven ==> 7
+
+jshell> Integer seven = 7;
+seven ==> 7
+
+jshell> Integer sevenAgain = 7;
+sevenAgain ==> 7
+
+jshell> seven ==sevenAgain
+$87 ==> true
+
+jshell> Integer.MAX_VALUE
+$88 ==> 2147483647
+
+jshell> Integer.MIN_VALUE
+$89 ==> -2147483648
+
+jshell> Integer.SIZE
+$90 ==> 32
+
+jshell> Integer.BYTES
+$91 ==> 4
+
+jshell>
