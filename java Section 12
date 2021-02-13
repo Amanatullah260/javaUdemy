@@ -432,3 +432,132 @@ jshell> Integer.BYTES
 $91 ==> 4
 
 jshell>
+
+:\Users\amanat>jshell
+|  Welcome to JShell -- Version 15.0.1
+|  For an introduction type: /help intro
+
+jshell> /imports
+|    import java.io.*
+|    import java.math.*
+|    import java.net.*
+|    import java.nio.file.*
+|    import java.util.*
+|    import java.util.concurrent.*
+|    import java.util.function.*
+|    import java.util.prefs.*
+|    import java.util.regex.*
+|    import java.util.stream.*
+
+jshell> import java.time.LocalDate
+
+jshell> LocalDate now = LocalDate.now()
+now ==> 2021-02-12
+
+jshell> import java.time.LocalDateTime
+
+jshell> import java.time.*
+
+jshell> LocalDateTime now = LocalDateTime.now()
+now ==> 2021-02-12T12:08:39.290414900
+
+jshell> LocalDate now = LocalDate.now()
+now ==> 2021-02-12
+
+jshell> LocalTime now = LocalTime.now()
+now ==> 12:10:59.712277200
+
+jshell> LocalDate today = LocalDate.now()
+today ==> 2021-02-12
+
+jshell> import java.time.*
+
+jshell> today.getYear()
+$10 ==> 2021
+
+jshell> today.getYear()
+$11 ==> 2021
+
+jshell> today.getDayOfWeek()
+$12 ==> FRIDAY
+
+jshell> today.getDayOfMonth()
+$13 ==> 12
+
+jshell> today.getDayOfYear()
+$14 ==> 43
+
+jshell> today.getMonth()
+$15 ==> FEBRUARY
+
+jshell> today.getMonthValue()
+$16 ==> 2
+
+jshell> today.isLeapYear()
+$17 ==> false
+
+jshell> today.lengthOfYear()
+$18 ==> 365
+
+jshell> today.lengthOfMonth()
+$19 ==> 28
+
+jshell> today.plusDays(100)
+$20 ==> 2021-05-23
+
+jshell> today.plusMonths(100)
+$21 ==> 2029-06-12
+
+jshell> today.plusYears(100)
+$22 ==> 2121-02-12
+
+jshell> today.minusYears(100)
+$23 ==> 1921-02-12
+
+jshell> LocalDate hundredYearsBefore = today.minusYears(100)
+hundredYearsBefore ==> 1921-02-12
+
+jshell> today
+today ==> 2021-02-12
+
+jshell> LocalDateTime now = LocalDateTime.now()
+now ==> 2021-02-12T12:27:36.886851800
+
+
+jshell> LocalDate yesterday = LocalDate.of(2021, 02, 13)
+yesterday ==> 2021-02-13
+
+jshell> LocalDate yesterday = LocalDate.of(2021, 02, 31)
+|  Exception java.time.DateTimeException: Invalid date 'FEBRUARY 31'
+|        at LocalDate.create (LocalDate.java:460)
+|        at LocalDate.of (LocalDate.java:272)
+|        at (#28:1)
+
+jshell> today
+today ==> 2021-02-12
+
+jshell> yesterday
+yesterday ==> 2021-02-13
+
+jshell> today.withYear(2021)
+$31 ==> 2021-02-12
+
+jshell> today.withYear(2016)
+$32 ==> 2016-02-12
+
+jshell> today.withDayOfMonth(20)
+$33 ==> 2021-02-20
+
+jshell> today.withMonth(3)
+$34 ==> 2021-03-12
+
+jshell> today.withDayOfYear(120)
+$35 ==> 2021-04-30
+
+jshell> today.isBefore(yesterday)
+$36 ==> true
+
+jshell> today.isAfter(yesterday)
+$37 ==> false
+
+jshell>
