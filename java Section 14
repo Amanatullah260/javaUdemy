@@ -1,0 +1,217 @@
+package com.in28minutes.oops.level2;
+
+public class fanRunner {
+
+	public static void main(String[] args) {
+		Fan fan = new Fan("Manufacture 1", 0.34567, "GREEN");
+
+		System.out.println(fan );
+	}
+
+}
+package com.in28minutes.oops.level2;
+
+public class Fan {
+
+	// state
+	private String make;
+	private double radius;
+	private String color;
+
+	private boolean isOn;
+	private byte speed;// 0 to 5
+
+	// creation
+	public Fan(String make, double radius, String color) {
+		this.make = make;
+		this.radius = radius;
+		this.color = color;
+	}
+
+	// print the state
+	@Override
+	public String toString() {
+		return String.format("make -%s, radius -%f, color - %s, isOn -%b , speed -%d ", make, radius, color, isOn,
+				speed);
+	}
+}
+
+output:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -false , speed -0
+
+
+
+Fan fan = new Fan("Manufacture 1", 0.34567, "GREEN");
+		fan.isOn(false);
+		System.out.println(fan);
+	}
+// isOn
+	public void isOn(boolean isOn) {
+		this.isOn = isOn;
+	}
+OUTPUT:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -false , speed -0
+
+
+
+                  {
+                  Fan fan = new Fan("Manufacture 1", 0.34567, "GREEN");
+		fan.isOn(true);
+		System.out.println(fan);
+	}
+
+
+output:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -true , speed -0
+
+
+
+      
+
+
+		this.isOn = true;
+	}
+
+	public void switchOff() {
+		this.isOn = false;
+	}
+
+        2nd: 
+            Fan fan = new Fan("Manufacture 1", 0.34567, "GREEN");
+		fan.switchOn();
+		System.out.println(fan);
+	}
+output:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -true , speed -0
+
+
+
+
+}
+
+
+        Fan fan = new Fan("Manufacture 1", 0.34567, "GREEN");
+		fan.switchOn();
+		System.out.println(fan);
+		fan.switchOff();
+		System.out.println(fan);
+	}
+ 
+output:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -true , speed -0 
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -false , speed -0 
+
+
+
+                fan.switchOn();
+		fan.setSpeed((byte) 5);
+		System.out.println(fan);
+		fan.switchOff();
+		System.out.println(fan); 
+
+}
+
+	public void setSpeed(byte speed) {
+		this.speed = speed;
+	}
+
+output:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -true , speed -5 
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -false , speed -5 
+
+
+
+
+public void switchOn() {
+		this.isOn = true;
+		setSpeed((byte) 5);
+	}
+
+	public void switchOff() {
+		this.isOn = false;
+		setSpeed((byte) 0);
+	}
+output:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -true , speed -5 
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -false , speed -0 
+
+
+
+         {
+             System.out.println(fan);
+		fan.setSpeed((byte) 3);
+		System.out.println(fan);
+		fan.switchOff();
+		System.out.println(fan);
+	}
+output:
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -true , speed -5 
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -true , speed -3 
+make -Manufacture 1, radius -0.345670, color - GREEN, isOn -false , speed -0 
+
+
+RectangleRunner:
+                1st:
+               package com.in28minutes.oops.level2;
+
+                public class RectangleRunner {
+
+	     public static void main(String[] args) {
+		Rectangle rectangle = new Rectangle(12, 23);
+		System.out.println(rectangle);
+		rectangle.setWidth(25);
+		System.out.println(rectangle);
+
+	}
+Rectangle.java:
+            2nd:
+            package com.in28minutes.oops.level2;
+
+          public class Rectangle {
+
+	// state
+	private int length;
+	private int width;
+
+	// creation
+	public Rectangle(int length, int width) {
+		this.length = length;
+		this.width = width;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void setLength(int length) {
+		this.length = length;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public int area() {
+		return length * width;
+	}
+	// operations
+
+	public int perimeter() {
+		return 2 * (length + width);
+	}
+
+	@Override
+	public String toString() {
+		return String.format("length -%d width -%d area -%d perimeter -%d", length, width, area(), perimeter());
+	}
+
+	// public String toString()
+}
+
+OUTPUT:
+length -12 width -23 area -276 perimeter -70
+length -12 width -25 area -300 perimeter -74
