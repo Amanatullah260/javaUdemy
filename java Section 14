@@ -215,3 +215,275 @@ Rectangle.java:
 OUTPUT:
 length -12 width -23 area -276 perimeter -70
 length -12 width -25 area -300 perimeter -74
+
+1ST:     package com.in28minutes.oops.level2;
+
+public class CustomerRunner {
+
+	public static void main(String[] args) {
+
+		Address homeAddress = new Address("line1", "Hyderabad", "500035");
+		Customer customer = new Customer("Ranga", homeAddress);
+		Address workAddress = new Address("line1 for work", "Hyderabad", "5000");
+		customer.setWorkAdress(workAddress);
+
+		System.out.println(customer);
+	}
+}
+
+2ND:        package com.in28minutes.oops.level2;
+
+public class Customer {
+	// state
+	private String name;
+	private Address homeAddress;
+	private Address workAdress;
+
+//creating
+	public Address getHomeAddress() {
+		return homeAddress;
+	}
+
+	public void setHomeAddress(Address homeAddress) {
+		this.homeAddress = homeAddress;
+	}
+
+	public Address getWorkAdress() {
+		return workAdress;
+	}
+
+	public void setWorkAdress(Address workAdress) {
+		this.workAdress = workAdress;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("name - [%s] home address - [%s] work address - [%s]", name, homeAddress,
+				getHomeAddress());
+	}
+//creating
+	public Customer(String name, Address homeAddress) {
+		this.name = name;
+		this.homeAddress = homeAddress;
+	}
+
+//operations
+
+}
+
+3RD:        package com.in28minutes.oops.level2;
+
+public class Address {
+	private String line1;
+	private String city;
+	private String zip;
+
+//creation
+	public Address(String line1, String city, String zip) {
+		super();
+		this.line1 = line1;
+		this.city = city;
+		this.zip = zip;
+	}
+@Override
+public String toString() {
+	return line1 + " " + city + " " + zip;
+}
+}
+OUTPUT:
+name - [Ranga] home address - [line1 Hyderabad 500035] work address - [line1 Hyderabad 500035]
+
+
+
+
+Customer customer = new Customer("Ranga", homeAddress);
+		System.out.println(customer);
+		Address workAddress = new Address("line1 for work", "Hyderabad", "5000");
+		customer.setWorkAdress(workAddress);
+otput:
+name - [Ranga] home address - [line1 Hyderabad 500035] work address - [line1 Hyderabad 500035]
+name - [Ranga] home address - [line1 Hyderabad 500035] work address - [line1 Hyderabad 500035]
+
+
+1ST:package com.in28minutes.oops.level2;
+
+public class BookRunner {
+
+	public static void main(String[] args) {
+		Book book = new Book(123, "Object Oriented Programming with java", "Ranga");
+		book.addReview(new Review(10, "Great Book", 5));
+		book.addReview(new Review(101, "Awesome", 5));
+
+		System.out.println(book);
+	}
+
+}
+
+
+2ND:package com.in28minutes.oops.level2;
+
+import java.util.ArrayList;
+
+public class Book {
+
+	private int id;
+	private String name;
+	private String author;
+	private ArrayList<Review> reviews = new ArrayList<>();
+
+	public Book(int id, String name, String author) {
+		this.id = id;
+		this.name = name;
+		this.author = author;
+	}
+
+	public void addReview(Review review) {
+		this.reviews.add(review);
+	}
+
+	@Override
+	public String toString() {
+		return String.format("id =%d name = %s author = %s Reviews = [%s]", id, name, author, reviews);
+	}
+}
+
+3RD:package com.in28minutes.oops.level2;
+
+public class Review {
+
+	private int id;
+	private String description;
+	private int rating;
+
+	public Review(int id, String description, int rating) {
+		this.id = id;
+		this.description = description;
+		this.rating = rating;
+	}
+
+	@Override
+	public String toString() {
+		return id + " " + description + " " + rating;
+	}
+}
+
+
+OUTPUT:
+id =123 name = Object Oriented Programming with java author = Ranga Reviews = [[10 Great Book 5, 101 Awesome 5]]
+
+
+
+
+1st:
+package com.in28minutes.oops.level2.inheritance;
+
+public class Person extends Object {
+	private String name;
+	private String email;
+	private String phoneNumber;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	@Override
+	public String toString() {
+		return name + "#" + email + "#" + phoneNumber;
+	}
+
+}
+
+output:
+null#null#null
+null#null#null
+
+
+2ND:
+package com.in28minutes.oops.level2.inheritance;
+
+public class StudentRunner {
+
+	public static void main(String[] args) {
+		// Student student = new Student();
+		// student.setName("Ranga");
+		// student.setEmail("in28minutes@gmail.com");
+
+		Person person = new Person();
+		person.setName("Ranga");
+		person.setEmail("ranga@in28minutes.com");
+		person.setPhoneNumber("123-456-7890");
+		String value = person.toString();
+		System.out.println(value);
+		System.out.println(person);
+
+	}
+
+}
+
+OUTPUT:
+Ranga#ranga@in28minutes.com#123-456-7890
+Ranga#ranga@in28minutes.com#123-456-7890
+
+
+3RD:
+package com.in28minutes.oops.level2.inheritance;
+
+public class Person extends Object {
+	private String name;
+	private String email;
+	private String phoneNumber;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+
+
+}
+
+OUTPUT:
+com.in28minutes.oops.level2.inheritance.Person@41a4555e
+com.in28minutes.oops.level2.inheritance.Person@41a4555e
+ 
