@@ -791,3 +791,79 @@ public class DummyAlgorithm implements ComplexAlgorithm {
 }
 Output:
 30
+
+package com.in28minutes.oops.level2.interfaces;
+
+interface Flyable {
+	void fly();
+}
+
+class Bird implements Flyable {
+
+	@Override
+	public void fly() {
+		System.out.println("with wings");
+
+	}
+
+}
+
+class Aeroplane implements Flyable {
+
+	@Override
+	public void fly() {
+		System.out.println("with fuel");
+	}
+}
+
+public class FlyableRunner {
+
+	public static void main(String[] args) {
+		Flyable[] flyableObjects = { new Bird(), new Aeroplane() };
+		for (Flyable object : flyableObjects) {
+			object.fly();
+
+		}
+}
+}
+
+
+Output:
+with wings
+with fuel
+
+
+
+ackage com.in28minutes.oops.level2.interfaces;
+
+abstract class Animal {
+	public void bark() {
+
+	}
+
+	class Dog extends Animal {
+		@Override
+		public void bark() {
+			System.out.println("Bow Bow");
+		}
+	}
+
+	class Cat extends Animal {
+		@Override
+		public void bark() {
+			System.out.println("Meow Meow");
+		}
+	}
+
+	public static class AnimalRunner {
+	public static void main(String[] args) {
+		Animal[] animal = {new Cat(), new Dog()};
+		for(Animal animal1:animal) {
+			animal1.bark();
+		}
+	}
+}
+
+Output:
+Meow Meow
+Bow Bow
