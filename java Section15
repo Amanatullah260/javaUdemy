@@ -1,0 +1,395 @@
+jshell> List<String> words = List.of("Apple", "Bat", "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> words.size()
+$2 ==> 3
+
+jshell> words.isEmpty()
+$3 ==> false
+
+jshell> words.get(0)
+$4 ==> "Apple"
+
+jshell> words.contains("Dog");
+$5 ==> false
+
+jshell> words.contains("Cat");
+$6 ==> true
+
+jshell> words.indexOf("Cat")
+$7 ==> 2
+
+jshell> words
+words ==> [Apple, Bat, Cat]
+
+jshell> words.add("Dog")
+|  Exception java.lang.UnsupportedOperationException
+|        at ImmutableCollections.uoe (ImmutableCollections.java:127)
+|        at ImmutableCollections$AbstractImmutableCollection.add (ImmutableCollections.java:131)
+|        at (#9:1)
+
+jshell> List<String> wordsArrayList = new ArrayList<String>(words)
+wordsArrayList ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsLinkedList = new LinkedList<String>(words)
+wordsLinkedList ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsVector = new Vector<String>(words)
+wordsVector ==> [Apple, Bat, Cat]
+
+jshell> wordsArrayList.add("Dog")
+$13 ==> true
+
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Cat, Dog]
+
+jshell>  wordsArrayList.add("Elephant")
+$15 ==> true
+
+jshell>  wordsArrayList.add("Ball")
+$16 ==> true
+
+jshell>  wordsArrayList
+wordsArrayList ==> [Apple, Bat, Cat, Dog, Elephant, Ball]
+
+jshell> List<String> newList = List.of("Yak","Zebra");
+newList ==> [Yak, Zebra]
+
+jshell>  wordsArrayList.addAll(newList)
+$19 ==> true
+
+jshell>  wordsArrayList
+wordsArrayList ==> [Apple, Bat, Cat, Dog, Elephant, Ball, Yak, Zebra]
+
+jshell>  wordsArrayList.set(6,"Fish")
+$21 ==> "Yak"
+
+jshell>  wordsArrayList
+wordsArrayList ==> [Apple, Bat, Cat, Dog, Elephant, Ball, Fish, Zebra]
+
+jshell>  wordsArrayList.remove(2)
+$23 ==> "Cat"
+
+jshell>  wordsArrayList
+wordsArrayList ==> [Apple, Bat, Dog, Elephant, Ball, Fish, Zebra]
+
+jshell>  wordsArrayList.remove("Dog")
+$25 ==> true
+
+jshell>
+
+
+jshell> List<String> words = List.of("Apple", "Bat", "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> for(int i=0; i<words.size(); i++) {
+   ...>     System.out.println(words.get(i));
+   ...> }
+Apple
+Bat
+Cat
+
+jshell> for(String words:words) {
+   ...>     System.out.println(words);
+   ...> }
+Apple
+Bat
+Cat
+
+jshell> Iterator wordsIterator = words.iterator();
+wordsIterator ==> java.util.ImmutableCollections$ListItr@2a33fae0
+
+jshell> while(wordsIterator.hasNext()) {
+   ...>     System.out.println(wordsIterator.next());
+   ...> }
+Apple
+Bat
+Cat
+
+jshell> List<String> words = List.of("Apple", "Bat", "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsA1 = new ArrayList<>(words);
+wordsA1 ==> [Apple, Bat, Cat]
+
+jshell> for(String word:words) {
+   ...>     if(word.endsWith("at"))
+   ...>     System.out.println(word);
+   ...> }
+Bat
+Cat
+
+jshell> List<String> words = List.of("Apple", "Bat", "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsA1 = new ArrayList<>(words);
+wordsA1 ==> [Apple, Bat, Cat]
+
+jshell> List value = List.of("A", 'A', 1, 1.0)
+value ==> [A, A, 1, 1.0]
+
+jshell> value.get(2)
+$37 ==> 1
+
+jshell> value.get(2) instanceof Integer
+$38 ==> true
+
+jshell> value.get(2) instanceof Character
+$39 ==> false
+
+jshell> value.get(1) instanceof Character
+$40 ==> true
+
+jshell> value.get(3) instanceof Double
+$41 ==> true
+
+jshell> List<Integer> numbers = List.of(101,102,103,104,105);
+numbers ==> [101, 102, 103, 104, 105]
+
+jshell> numbers.indexOf(101);
+$43 ==> 0
+
+jshell> List<Integer> numbersAl = new ArrayList<>(numbers);
+numbersAl ==> [101, 102, 103, 104, 105]
+
+jshell> numbersAl.indexOf(101)
+$45 ==> 0
+
+jshell> numbersAl.remove(101)
+|  Exception java.lang.IndexOutOfBoundsException: Index 101 out of bounds for length 5
+|        at Preconditions.outOfBounds (Preconditions.java:64)
+|        at Preconditions.outOfBoundsCheckIndex (Preconditions.java:70)
+|        at Preconditions.checkIndex (Preconditions.java:248)
+|        at Objects.checkIndex (Objects.java:359)
+|        at ArrayList.remove (ArrayList.java:504)
+|        at (#46:1)
+
+jshell> numbersAl.remove(Integer.valueOf(101))
+$47 ==> true
+
+jshell> numbersAl
+numbersAl ==> [102, 103, 104, 105]
+
+jshell> List<Integer> numbers = List.of(123,12,3,45)
+numbers ==> [123, 12, 3, 45]
+
+jshell> List<Integer> numbersAl = new ArrayList<>(numbers);
+
+numbersAl ==> [123, 12, 3, 45]
+
+package collections;
+
+1st:import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class StudentsCollectionRunner {
+
+	public static void main(String[] args) {
+		List<Student> students = List.of(new Student(1, "Ranga"), new Student(100, "Adam"), new Student(2, "Eve"));
+
+		List<Student> studentsAl = new ArrayList<>(students);
+
+		System.out.println(studentsAl);
+
+		Collections.sort(studentsAl);
+		System.out.println(studentsAl);
+	}
+
+}
+
+2nd:
+package collections;
+
+public class Student implements Comparable<Student> {
+
+	private int id;
+	private String name;
+
+	public Student(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return id + " " + name;
+	}
+
+	@Override
+	public int compareTo(Student that) {
+		return Integer.compare(this.id, that.id);
+
+	}
+
+}
+
+Output:
+[1 Ranga, 100 Adam, 2 Eve]
+[1 Ranga, 2 Eve, 100 Adam]
+
+
+package collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+classDescendingStudentComparator implements Comparator<Student> {
+	
+	
+	public int compare(Student student1, Student student2) {
+		return Integer.compare(student1.getId(), student2.getId());
+	}
+}
+
+public class StudentsCollectionRunner {
+
+	public static void main(String[] args) {
+		List<Student> students = List.of(new Student(1, "Ranga"),
+				new Student(100, "Adam"),
+				new Student(2, "Eve"));
+
+		ArrayList<Student> studentsAl = new ArrayList<>(students);
+
+		System.out.println(studentsAl);
+
+		Collections.sort(studentsAl);
+		System.out.println("Asc" + studentsAl);
+		
+		Collections.sort(studentsAl, new DescendingStudentComparator());
+		System.out.println("DescendingStudentComparator" + studentsAl);
+		
+	}
+
+}
+
+package collections;
+
+public class Student implements Comparable<Student> {
+
+	private int id;
+	private String name;
+
+	public Student(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return id + " " + name;
+	}
+
+	@Override
+	public int compareTo(Student that) {
+		return Integer.compare(this.id, that.id);
+
+	}
+
+}
+Output:
+[1 Ranga, 100 Adam, 2 Eve]
+Asc [100 Adam, 2 Eve, 1 Ranga]
+DescendingStudentComparator [1 Ranga, 2 Eve, 100 Adam]
+
+
+
+package collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+classAscendingStudentComparator implements Comparator<Student> {
+	
+	
+	public int compare(Student student1, Student student2) {
+		return Integer.compare(student1.getId(), student2.getId());
+	}
+}
+
+public class StudentsCollectionRunner {
+
+	public static void main(String[] args) {
+		List<Student> students = List.of(new Student(1, "Ranga"),
+				new Student(100, "Adam"),
+				new Student(2, "Eve"));
+
+		ArrayList<Student> studentsAl = new ArrayList<>(students);
+
+		System.out.println(studentsAl);
+
+		Collections.sort(studentsAl);
+		System.out.println("Asc" + studentsAl);
+		
+		//Collections.sort(studentsAl, new DescendingStudentComparator());
+		studentsAl.sort(new AscendingStudentComparator());
+		System.out.println("AscendingStudentComparator" + studentsAl);
+		
+	}
+
+}
+
+OUTPUT:
+[1 Ranga, 100 Adam, 2 Eve]
+Asc [100 Adam, 2 Eve, 1 Ranga]
+AscendingStudentComparator [1 Ranga, 2 Eve, 100 Adam]
+
+
+jshell> Set<String> set = Set.of("Apple", "Banana", "Cat")
+set ==> [Banana, Apple, Cat]
+
+jshell> set.add("Apple");
+|  Exception java.lang.UnsupportedOperationException
+|        at ImmutableCollections.uoe (ImmutableCollections.java:127)
+|        at ImmutableCollections$AbstractImmutableCollection.add (ImmutableCollections.java:131)
+|        at (#2:1)
+
+
+
+jshell>  Set<String> hashset = new HashSet<>(set)
+hashset ==> [Apple, Cat, Banana]
+
+jshell> hashset.add("Apple")
+$4 ==> false
+
+jshell> hashset
+hashset ==> [Apple, Cat, Banana]
+
