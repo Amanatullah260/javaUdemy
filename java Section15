@@ -393,3 +393,308 @@ $4 ==> false
 jshell> hashset
 hashset ==> [Apple, Cat, Banana]
 
+package collections;
+
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SetRunner {
+
+	public static void main(String[] args) {
+		List<Character> characters = List.of('A', 'Z', 'A', 'B', 'Z', 'F');
+		// Unique - Set
+		// Tree
+		// Hash
+		// LinkedHash
+
+		Set<Character> treeSet = new TreeSet<>(characters);
+		System.out.println(treeSet);
+
+	}
+
+}
+
+Output:
+[A, B, F, Z]
+
+
+                Set<Character> treeSet = new TreeSet<>(characters);
+		System.out.println("treeSet " + treeSet);
+
+		Set<Character> LinkedHashSet = new LinkedHashSet<>(characters);
+		System.out.println("linkedHashSet " + LinkedHashSet);
+	}
+
+}
+
+Output:
+linkedHashSet [A, Z, B, F]
+
+
+
+Set<Character> HashSet = new HashSet<>(characters);
+		System.out.println("HashSet " + HashSet);
+	}
+output:
+HashSet [A, B, F, Z]
+
+
+
+package collections;
+
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class QueueRunner {
+
+	public static void main(String[] args) {
+		Queue<String> queue = new PriorityQueue<>();
+		queue.addAll(List.of("Zebra", "Monkey", "Cat"));
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+	}
+
+}
+
+output:
+Cat
+Monkey
+Zebra
+null
+
+
+package collections;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class QueueRunner {
+
+	class StringLengthComparator implements Comparator<String> {
+
+		@Override
+		public int compare(String value1, String value2) {
+			// TODO Auto-generated method stub
+			return Integer.compare(value1.length(), value2.length());
+		}
+	}
+
+	public static void main(String[] args) {
+		Queue<String> queue = new PriorityQueue<>();
+		queue.addAll(List.of("Zebra", "Monkey", "Cat"));
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+	}
+
+}
+
+output:
+Cat
+Monkey
+Zebra
+null
+
+
+
+
+jshell> Set<Integer> numbers = new HashSet<>();
+numbers ==> []
+
+jshell> numbers.add(765432);
+$2 ==> true
+
+jshell> numbers.add(76543);
+$3 ==> true
+
+jshell> numbers.add(76);
+$4 ==> true
+
+jshell> numbers
+numbers ==> [765432, 76, 76543]
+
+jshell> Set<Integer> numbers = new LinkedHashSet<>();
+numbers ==> []
+
+jshell> numbers.add(765432);
+$7 ==> true
+
+jshell> numbers.add(7654);
+$8 ==> true
+
+jshell> numbers.add(765);
+$9 ==> true
+
+jshell> numbers
+numbers ==> [765432, 7654, 765]
+
+jshell> numbers.add(76)
+$11 ==> true
+
+jshell> Set<Integer> numbers = new TreeSet<>();
+numbers ==> []
+
+jshell> numbers.add(76543);
+$13 ==> true
+
+jshell> numbers.add(7654);
+$14 ==> true
+
+jshell> numbers.add(765);
+$15 ==> true
+
+jshell> numbers.add(76);
+$16 ==> true
+
+jshell> numbers
+numbers ==> [76, 765, 7654, 76543]
+
+jshell> numbers.add(76)
+$18 ==> false
+
+
+jshell> TreeSet<Integer> numbers = new TreeSet<>(Set.of(65,54,34,12,99))
+numbers ==> [12, 34, 54, 65, 99]
+
+jshell> numbers.floor(40)
+$20 ==> 34
+
+jshell> numbers.floor(34)
+$21 ==> 34
+
+jshell> numbers.lower(34)
+$22 ==> 12
+
+jshell> numbers.higher(34)
+$23 ==> 54
+
+jshell> numbers
+numbers ==> [12, 34, 54, 65, 99]
+
+jshell> numbers.subSet(20,80)
+$25 ==> [34, 54, 65]
+
+jshell> numbers.subSet(34,54)
+$26 ==> [34]
+
+jshell> numbers.subSet(20,65)
+$27 ==> [34, 54]
+
+jshell> numbers.subSet(34,true,65,true)
+$28 ==> [34, 54, 65]
+
+jshell>  numbers.subSet(34,false,65,false)
+$29 ==> [54]
+
+jshell> numbers.headSet(50)
+$30 ==> [12, 34]
+
+jshell> numbers.tailSet(50)
+$31 ==> [54, 65, 99]
+
+jshell> Queue<String> queue = new PriorityQueue<>();
+queue ==> []
+
+jshell> queue.poll()
+$33 ==> null
+
+jshell> queue.offer("Apple")
+$34 ==> true
+
+jshell> queue.addAll(List.of("Zebra", "Monkey", "Cat"))
+$35 ==> true
+
+jshell> queue
+queue ==> [Apple, Cat, Monkey, Zebra]
+
+jshell> queue.poll()
+$37 ==> "Apple"
+
+jshell> queue
+queue ==> [Cat, Zebra, Monkey]
+
+jshell> queue.poll()
+$39 ==> "Cat"
+
+jshell> queue.poll()
+$40 ==> "Monkey"
+
+jshell> queue.poll()
+$41 ==> "Zebra"
+
+jshell> queue.poll()
+$42 ==> null
+
+jshell>
+
+jshell> Map<String, Integer> map = Map.of("A", 3, "B", 5,"Z", 10);
+map ==> {A=3, B=5, Z=10}
+
+jshell> map.put("R",1);
+|  Exception java.lang.UnsupportedOperationException
+|        at ImmutableCollections.uoe (ImmutableCollections.java:127)
+|        at ImmutableCollections$AbstractImmutableMap.put (ImmutableCollections.java:907)
+|        at (#44:1)
+
+jshell> map
+map ==> {A=3, B=5, Z=10}
+
+jshell> map.get("Z")
+$46 ==> 10
+
+jshell> map.get("A")
+$47 ==> 3
+
+jshell> map.get("C")
+$48 ==> null
+
+jshell> map.size()
+$49 ==> 3
+
+jshell> map.isEmpty()
+$50 ==> false
+
+jshell> map.containsKey("A")
+$51 ==> true
+
+jshell> map.containsValue(3)
+$52 ==> true
+
+jshell> map
+map ==> {A=3, B=5, Z=10}
+
+jshell> map.containsValue(4)
+$54 ==> false
+
+jshell> map.keySet()
+$55 ==> [A, B, Z]
+
+jshell> map
+map ==> {A=3, B=5, Z=10}
+
+jshell> Map<String, Integer> map = Map.of("A",3,"B",5,"Z",10);
+map ==> {A=3, B=5, Z=10}
+
+jshell> Map<String,Integer>hashmap = new HashMap<>(map);
+hashmap ==> {A=3, B=5, Z=10}
+
+jshell> hashmap.put("F",5)
+$59 ==> null
+
+jshell> hashmap
+hashmap ==> {A=3, B=5, Z=10, F=5}
+
+jshell> hashmap.put("Z",11)
+$61 ==> 10
+
+jshell> hashmap
+hashmap ==> {A=3, B=5, Z=11, F=5}
+
+jshell>
