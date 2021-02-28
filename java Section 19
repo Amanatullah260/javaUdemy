@@ -1,0 +1,236 @@
+package com.in28minutes.exceptionhandling;
+
+public class ExceptionHandlingRunner2 {
+
+	public static void main(String[] args) {
+		method1();
+		System.out.println("Main Ended");
+	}
+
+	private static void method1() {
+		method2();
+		System.out.println("Method1 Ended");
+	}
+
+	private static void method2() {
+		try {
+			// String str = null;
+			// str.length();
+			int[] i = { 1, 2 };
+			int number = i[3];
+		System.out.println("Method2 Ended");
+	} catch (NullPointerException ex) {
+		System.out.println("Matched NullPointerException");
+		ex.printStackTrace();
+	} catch (ArrayIndexOutOfBoundsException ex) {
+		System.out.println("Matched ArrayIndexOutOfBounds Exception");
+		ex.printStackTrace();
+
+	}
+
+}
+}
+
+output:
+Matched ArrayIndexOutOfBounds Exception
+java.lang.ArrayIndexOutOfBoundsException
+
+Method1 Ended
+Main Ended
+
+
+
+
+package com.in28minutes.exceptionhandling;
+
+import java.util.Scanner;
+
+public class FinallyRunner {
+
+	public static void main(String[] args) {
+		try {
+		Scanner scanner = new Scanner(System.in);
+
+		int[] numbers = { 12, 3, 4, 5 };
+
+		int number = numbers[5];
+
+		System.out.println("Before Scanner Close");
+
+		scanner.close();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+
+	System.out.println("Just before closing out main");
+
+	}
+
+}
+
+
+output:
+java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4
+	at com.in28minutes.exceptionhandling.FinallyRunner.main(FinallyRunner.java:13)
+Just before closing out main
+
+
+
+
+public static void main(String[] args) {
+
+		Scanner scanner = null;
+
+		try {
+			scanner = new Scanner(System.in);
+
+		int[] numbers = { 12, 3, 4, 5 };
+
+		int number = numbers[5];
+
+		System.out.println("Before Scanner Close");
+
+		scanner.close();
+	} catch (Exception e) {
+		e.printStackTrace();
+	} finally {
+		System.out.println("Before Scanner Close");
+		scanner.close();
+	}
+
+	System.out.println("Just before closing out main");
+
+	}
+
+}
+
+
+output:
+Before Scanner Close
+Just before closing out main
+
+package com.in28minutes.exceptionhandling;
+
+public class ExceptionHandlingRunner2 {
+
+	public static void main(String[] args) {
+		method1();
+		System.out.println("Main Ended");
+	}
+
+	private static void method1() {
+		method2();
+		System.out.println("Method1 Ended");
+	}
+
+	private static void method2() {
+		try {
+			// String str = null;
+			// str.length();
+			int[] i = { 1, 2 };
+			int number = i[3];
+		System.out.println("Method2 Ended");
+	} catch (NullPointerException ex) {
+		System.out.println("Matched NullPointerException");
+		ex.printStackTrace();
+	} catch (ArrayIndexOutOfBoundsException ex) {
+		System.out.println("Matched ArrayIndexOutOfBounds Exception");
+		ex.printStackTrace();
+
+	}
+
+}
+}
+
+
+package com.in28minutes.exceptionhandling;
+
+public class CheckedExceptionRunner {
+
+	public static void main(String[] args) {
+		/*
+		 * try { someOtherMethod(); Thread.sleep(2000); } catch (InterruptedException e)
+		 * { e.printStackTrace(); }
+		 */
+		someOtherMethod2();
+
+	}
+
+	private static void someOtherMethod2() throws RuntimeException {
+
+	}
+
+	private static void someOtherMethod() throws InterruptedException {
+		Thread.sleep(2000);
+
+	}
+}
+
+
+
+1st:
+package com.in28minutes.exceptionhandling;
+
+class Amount {
+	private String currency;
+	private int amount;
+
+	public Amount(String currency, int amount) {
+		super();
+		this.currency = currency;
+		this.amount = amount;
+	}
+
+	public void add(Amount other) {
+		this.amount = this.amount + other.amount;
+	}
+
+	@Override
+	public String toString() {
+		return amount + " " + currency;
+	}
+}
+
+public class ThrowingExceptionRunner {
+
+	public static void main(String[] args) {
+		Amount amount1 = new Amount("USD", 10);
+		Amount amount2 = new Amount("USD", 20);
+		amount1.add(amount2);
+		System.out.println(amount1);
+	}
+
+}
+
+Output:
+30 USD
+
+
+
+
+package com.in28minutes.rips.eclipse;
+
+import java.math.BigDecimal;
+
+class Test implements Comparable<String> {
+	
+	@Override
+	public int compareTo(String arg0) {
+		
+		return 0;
+	}
+
+}
+
+public class EclipseTipsAndTricks {
+	private static final int INT = 1000 * 45 * 456;
+
+	public static void main(String[] args) throws InterruptedException {
+		DummyForTest dt = new DummyForTest();
+		dt.doSomething();
+	
+		BigDecimal bd = new BigDecimal(25);
+        int i = 1000 * 45 * 456;
+		Thread.sleep(INT);
+	}
+}
